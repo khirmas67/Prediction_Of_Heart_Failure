@@ -15,9 +15,9 @@ The project Structure is as follows:
 Prediction_Of_Heart_Failure/
 │
 ├── data/              		# Folder for raw and processed data
-├── notebooks/          	# Jupyter notebooks for experiments and EDA
-├── models/             	# Trained models and evaluation reports
-├── visualization_output/	# Visualizations from EDA and model performance
+├── experiments/          # Jupyter notebooks for experiments and EDA
+├── models/             	# Trained models 
+├── reports/            	# Visualizations  evaluation reports from EDA and model performance
 ├── README.md           	# Project overview and instructions (this file)
 ├── requirements.txt    	# List of dependencies
 └── src/                	# Python scripts for preprocessing, training, and evaluation
