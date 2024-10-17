@@ -1,15 +1,24 @@
  <font color='green'>**Prediction Heart Failure Using Machine Learning**</font>
----------------------------------------------------
-**Overview**
+
+## **Table of Contents**  
+1. [Overview](#overview)  
+2. [Business_Case](#business_case)  
+3. [Project_Structure](#project_structure)  
+4. [Dataset](#dataset)  
+5. [How_to_Run_the_Project](# how_to_Run_the_Project)  
+7. [Conclusion](#conclusion) 
+6. [Contact](#contact) 
+
+## **Overview**
 This project aims to develop a machine learning model that predicts the risk of heart failure using patient data
 
 
 
-**Business Case: Pharmaceutical Industry**
+## **Business Case: Pharmaceutical Industry**
 
 
 
-**Project Structure**
+## **Project Structure**
 The project Structure is as follows:
 
 Prediction_Of_Heart_Failure/
@@ -26,7 +35,7 @@ Prediction_Of_Heart_Failure/
 └── src/                	# Python scripts for preprocessing, training, and evaluation
 
 
-**Dataset**
+## **Dataset**
 The dataset used in this project is available on [Kaggle](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction). It contains **299 samples** with **13 clinical features**, including:
 
 
@@ -34,7 +43,7 @@ The dataset used in this project is available on [Kaggle](https://www.kaggle.com
 
 
 
-**How to Run the Project**
+## **How to Run the Project**
 1. **Clone the repository:**
 
    git clone (https://github.com/khirmas67/Prediction_Of_Heart_Failure.git)
@@ -48,11 +57,11 @@ The dataset used in this project is available on [Kaggle](https://www.kaggle.com
 
 
 
-**Conclusion**
+## **Conclusion**
 
 
 
-**Contact**
+## **Contact**
 Feel free to reach out if you have any questions or feedback:  
 **Khaled Hirmas** : https://github.com/khirmas67
 
