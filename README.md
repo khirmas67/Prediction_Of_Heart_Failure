@@ -17,7 +17,7 @@ Prediction_Of_Heart_Failure/
 ├── data/              		# Folder for raw and processed data
 ├── experiments/          # Jupyter notebooks for experiments and EDA
 ├── models/             	# Trained models 
-├── reports/            	# Visualizations  evaluation reports from EDA and model performance
+├── reports/            	# Visualizations, evaluation reports from EDA and model performance
 ├── README.md           	# Project overview and instructions (this file)
 ├── requirements.txt    	# List of dependencies
 └── src/                	# Python scripts for preprocessing, training, and evaluation
