@@ -2,10 +2,9 @@
 
 ## **Table of Contents**  
 1. [Overview](#overview)  
-2. [Business_Case](#business_case)  
-3. [Project_Structure](#project_structure)  
+3. [Project Structure](#project-structure)  
 4. [Dataset](#dataset)  
-5. [How_to_Run_the_Project](# how_to_Run_the_Project)  
+5. [How to Run the Project](#how-to-run_the-Project)  
 7. [Conclusion](#conclusion) 
 6. [Contact](#contact) 
 
@@ -24,15 +23,15 @@ The project Structure is as follows:
 Prediction_Of_Heart_Failure/
 │
 ├── data/
-|     ├── processed/        # Folder for processed data
-|     ├── raw/              # Folder for raw data
-|     ├── SQL/              # Folder for tables|
-├── experiments/            # Jupyter notebooks for experiments and EDA
-├── models/             	# Trained models 
-├── reports/            	# Visualizations, evaluation reports from EDA and model performance
-├── README.md           	# Project overview and instructions (this file)
-├── requirements.txt    	# List of dependencies
-└── src/                	# Python scripts for preprocessing, training, and evaluation
+|     ├── processed/            # Folder for processed data
+|     ├── raw/                  # Folder for raw data
+|     ├── SQL/                  # Folder for tables|
+├── experiments/                # Jupyter notebooks for experiments and EDA
+├── models/             	    # Trained models 
+├── reports/            	    # Visualizations, evaluation reports from EDA and model performance
+├── README.md           	    # Project overview and instructions (this file)
+├── requirements.txt    	    # List of dependencies
+└── src/                	    # Python scripts for preprocessing, training, and evaluation
 
 
 ## **Dataset**
