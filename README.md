@@ -1,5 +1,5 @@
-**Prediction Heart Failure Using Machine Learning**
-
+ <font color='green'>**Prediction Heart Failure Using Machine Learning**</font>
+---------------------------------------------------
 **Overview**
 This project aims to develop a machine learning model that predicts the risk of heart failure using patient data
 
@@ -25,3 +25,32 @@ Prediction_Of_Heart_Failure/
 
 **Dataset**
 The dataset used in this project is available on [Kaggle](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction). It contains **299 samples** with **13 clinical features**, including:
+
+
+
+
+
+
+**How to Run the Project**
+1. **Clone the repository:**
+
+   git clone (https://github.com/khirmas67/Prediction_Of_Heart_Failure.git)
+   cd Prediction_Of_Heart_Failure
+   
+
+2. **Install the dependencies:**
+   
+   pip install -r requirements.txt
+
+
+
+
+**Conclusion**
+
+
+
+**Contact**
+Feel free to reach out if you have any questions or feedback:  
+**Khaled Hirmas** : https://github.com/khirmas67
+
+   
