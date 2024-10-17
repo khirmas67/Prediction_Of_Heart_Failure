@@ -1,4 +1,4 @@
- <font color='green'>**Prediction Heart Failure Using Machine Learning**</font>
+### **Prediction Heart Failure Using Machine Learning**
 
 ## **Table of Contents**  
 1. [Overview](#overview)  
