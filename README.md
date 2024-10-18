@@ -63,7 +63,7 @@ The **target variable** indicates whether heart failure was detected (binary: No
 ## **Conclusion**
 
 
-## **Refernces**
+## **References**
 1. Basic writing and formatting syntax [🔗](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) 
 
 2. Heart Failure Prediction Dataset on Kaggle [🔗](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
