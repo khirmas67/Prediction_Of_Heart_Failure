@@ -1,5 +1,4 @@
 # **Prediction Heart Failure Using Machine Learning**
-```bash
 
 ## **Table of Contents**  
 1. [Overview](#overview)  
@@ -8,18 +7,15 @@
 5. [How to Run the Project](#how-to-run_the-Project)  
 7. [Conclusion](#conclusion) 
 6. [Contact](#contact) 
-```bash
 
 ## **Overview**
 This project aims to develop a machine learning model that predicts the risk of heart failure using patient data
 
 
-```bash
 
 ## **Business Case: Pharmaceutical Industry**
 
 
-```bash
 
 ## **Project Structure**
 The project Structure is as follows:
@@ -39,7 +35,7 @@ Prediction_Of_Heart_Failure/
 ├── requirements.txt          # List of dependencies
 └── src/                      # Python scripts for preprocessing, training, and evaluation
 
-```bash
+```
 ## **Dataset**
 The dataset used in this project is available on [Kaggle](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction). It contains **299 samples** with **13 clinical features**, including:
 
@@ -47,7 +43,6 @@ The dataset used in this project is available on [Kaggle](https://www.kaggle.com
 
 
 
-```bash
 
 ## **How to Run the Project**
 1. **Clone the repository:**
@@ -55,19 +50,16 @@ The dataset used in this project is available on [Kaggle](https://www.kaggle.com
    git clone (https://github.com/khirmas67/Prediction_Of_Heart_Failure.git)
    cd Prediction_Of_Heart_Failure
    
-```bash
 
 2. **Install the dependencies:**
    
    pip install -r requirements.txt
 
 
-```bash
 
 
 ## **Conclusion**
 
-```bash
 
 
 ## **Contact**
