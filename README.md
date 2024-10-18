@@ -43,14 +43,15 @@ The dataset used in this project is available on [Kaggle](https://www.kaggle.com
 
 ## **How to Run the Project**
 1. **Clone the repository:**
-
+   ```bash
    git clone (https://github.com/khirmas67/Prediction_Of_Heart_Failure.git)
    cd Prediction_Of_Heart_Failure
-   
+   ```
 
 2. **Install the dependencies:**
    ```bash
-   pip install -r requirements.txt ```
+   pip install -r requirements.txt 
+   ```
 
 
 
