@@ -19,9 +19,6 @@ This project aims to develop a machine learning model that predicts the risk of 
 
 ## **Project Structure**
 The project Structure is as follows:
-
-## Project Structure
-
 ```bash
 Prediction_Of_Heart_Failure/
 ├── data/
@@ -52,8 +49,8 @@ The dataset used in this project is available on [Kaggle](https://www.kaggle.com
    
 
 2. **Install the dependencies:**
-   
-   pip install -r requirements.txt
+   ```bash
+   pip install -r requirements.txt ```
 
 
 
