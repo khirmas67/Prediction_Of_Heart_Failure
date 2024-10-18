@@ -20,18 +20,21 @@ This project aims to develop a machine learning model that predicts the risk of 
 ## **Project Structure**
 The project Structure is as follows:
 
+## Project Structure
+
+```bash
 Prediction_Of_Heart_Failure/
-│
 ├── data/
-|     ├── processed/            # Folder for processed data
-|     ├── raw/                  # Folder for raw data
-|     ├── SQL/                  # Folder for tables|
-├── experiments/                # Jupyter notebooks for experiments and EDA
-├── models/             	    # Trained models 
-├── reports/            	    # Visualizations, evaluation reports from EDA and model performance
-├── README.md           	    # Project overview and instructions (this file)
-├── requirements.txt    	    # List of dependencies
-└── src/                	    # Python scripts for preprocessing, training, and evaluation
+│   ├── processed/            # Folder for processed data
+│   ├── raw/                  # Folder for raw data
+│   └── SQL/                  # Folder for tables
+├── experiments/              # Jupyter notebooks for experiments and EDA
+├── models/                   # Trained models 
+├── reports/                  # Visualizations, evaluation reports from EDA and model performance
+├── README.md                 # Project overview and instructions (this file)
+├── requirements.txt          # List of dependencies
+└── src/                      # Python scripts for preprocessing, training, and evaluation
+
 
 
 ## **Dataset**
