@@ -10,15 +10,15 @@
 7. [Contact](#contact) 
 
 ## **Overview**
-This project aims to develop a machine learning model, KNN Classification, that predicts the risk of heart failure using patient data. The project focuses on helping **pharmaceutical companies** identify patients who are most likely to benefit from specific treatments or participate in clinical trials. If the right individuals are identified, then pharmaceutical companies can smooth clinical trials, optimize drug development, and enhance the effectiveness of the new treatments.
+The purpose of this project is to develop a KNN classification model to predict heart failure risk using patient data. It helps **pharmaceutical companies** identify patients who are likely to benefit from specific treatments or be part of the  clinical trials. Identifying the right patients can make trials run smoothly, improve drug development, and increase the effectiveness of new treatments.
 
 
 
 ## **Business Case: Pharmaceutical Industry**
-In the pharmaceutical industry, **identifying target patients** plays an important role in ensuring the success of clinical trials and drug treatments. The machine learning model  used in this project offers several benefits for the industry: 
-1. Improve the selection of candidates for clinical trials.
-2. Selection of right candidates reduces time and cost of the trials.
-3. Increases treatment efficiency.
+In the pharmaceutical industry, **identifying target patients** is very important for the success of clinical trials and drug treatments. The machine learning model in this project provides several benefits:  
+1. Improves candidate selection for clinical trials.  
+2. Reduces trial time and costs by selecting the right participants.  
+3. Enhances treatment effectiveness.
 
 ## **Project Structure**
 The project Structure is as follows:
