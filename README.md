@@ -22,7 +22,7 @@ The project Structure is as follows:
 
 ## Project Structure
 
-```bash
+
 Prediction_Of_Heart_Failure/
 ├── data/
 │   ├── processed/            # Folder for processed data
