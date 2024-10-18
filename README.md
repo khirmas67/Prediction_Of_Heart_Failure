@@ -6,7 +6,8 @@
 4. [Dataset](#dataset)  
 5. [How to Run the Project](#how-to-run_the-Project)  
 7. [Conclusion](#conclusion) 
-6. [Contact](#contact) 
+6. [References](#refernces) 
+7. [Contact](#contact) 
 
 ## **Overview**
 This project aims to develop a machine learning model that predicts the risk of heart failure using patient data
@@ -35,6 +36,16 @@ Prediction_Of_Heart_Failure/
 ```
 ## **Dataset**
 The dataset used in this project is available on [Kaggle](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction). It contains **299 samples** with **13 clinical features**, including:
+- Age  
+- Resting blood pressure  
+- Serum cholesterol  
+- Maximum heart rate achieved  
+- ST depression induced by exercise  
+- Slope of the ST segment  
+- Presence of chest pain  
+- Whether the patient has diabetes or hypertension
+
+The **target variable** indicates whether heart failure was detected (binary: No = 0, Yes = 1).
 
 
 
@@ -59,6 +70,12 @@ The dataset used in this project is available on [Kaggle](https://www.kaggle.com
 ## **Conclusion**
 
 
+## **Refernces**
+1. Basic writing and formatting syntax [Basic writing and formatting syntax](#https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) 
+
+2. 
+
+3. hhh
 
 ## **Contact**
 Feel free to reach out if you have any questions or feedback:  
