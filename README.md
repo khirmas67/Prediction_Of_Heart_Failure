@@ -71,7 +71,7 @@ The **target variable** indicates whether heart failure was detected (binary: No
 
 
 ## **Refernces**
-1.[Basic writing and formatting syntax](#https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) 
+1.Basic writing and formatting synta [🔗](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) 
 
 2. 
 
