@@ -37,17 +37,20 @@ Prediction_Of_Heart_Failure/
 
 ```
 ## **Dataset**
-The dataset used in this project is available on [Kaggle](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction). It contains **299 samples** with **13 clinical features**, including:
+The dataset used in this project is available on [Kaggle](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction). It contains **918 samples** with **11 clinical features**, including:
 - Age  
+- Sex
+- Chest pain type
 - Resting blood pressure  
 - Serum cholesterol  
-- Maximum heart rate achieved  
-- ST depression induced by exercise  
+- Fasting blood sugar
+- Resting electrocardiogram
+- Maximum heart rate achieved
+- Exercise Angina
+- ST depression(OldPeak)
 - Slope of the ST segment  
-- Presence of chest pain  
-- Whether the patient has diabetes or hypertension
 
-The **target variable** indicates whether heart failure was detected (binary: No = 0, Yes = 1).
+The **target variable (HeartDisease** indicates whether heart failure was detected (binary: No = 0, Yes = 1).
 
 ## **How to Run the Project**
 1. **Clone the repository:**
