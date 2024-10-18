@@ -1,4 +1,4 @@
-# **Prediction Heart Failure Using Machine Learning**
+# **Prediction OF Heart Failure Using Machine Learning**
 
 ## **Table of Contents**  
 1. [Overview](#overview)  
