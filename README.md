@@ -69,7 +69,7 @@ The **target variable (HeartDisease** indicates whether heart failure was detect
 ## **References**
 1. Basic writing and formatting syntax [🔗](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) 
 
-2. G. James, D. Witten, T. Hastie, R.  Tibshirani, J. Taylor, An Introduction to Statistical Learning with applications in Python(pringer: 2023)
+2. G. James et al., An Introduction to Statistical Learning with applications in Python(pringer: 2023)
 
 3. Heart Failure Prediction Dataset on Kaggle [🔗](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
 
