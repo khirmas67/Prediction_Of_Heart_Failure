@@ -69,9 +69,13 @@ The **target variable (HeartDisease** indicates whether heart failure was detect
 ## **References**
 1. Basic writing and formatting syntax [🔗](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) 
 
-2. Heart Failure Prediction Dataset on Kaggle [🔗](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
+2. G. James, D. Witten, T. Hastie, R.  Tibshirani, J. Taylor, An Introduction to Statistical Learning with applications in Python(pringer: 2023)
 
-3. 
+3. Heart Failure Prediction Dataset on Kaggle [🔗](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
+
+4. Choosing color palettes [🔗](https://seaborn.pydata.org/tutorial/color_palettes.html)
+
+5. Helper Function for Plotting [🔗](https://matplotlib.org/stable/gallery/color/named_colors.html#)
 
 ## **Contact**
 Feel free to reach out if you have any questions or feedback:  
