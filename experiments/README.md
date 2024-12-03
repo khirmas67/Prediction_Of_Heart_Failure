@@ -31,7 +31,7 @@ This part of the project focuses on data processing and analysis for predicting 
      
 
    Example:  
-   ![heart_disease_distribution](reports/visualizations/heart_disease_distribution.png)  
+   ![heart_disease_distribution]('reports/visualizations/heart_disease_distribution.png')  
    ![Heatmap](path/to/heatmap.png)
 
 6. **Processed Data**    
