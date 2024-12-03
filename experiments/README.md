@@ -24,16 +24,16 @@ This part of the project focuses on data processing and analysis for predicting 
    - Applied a **t-test** to analyze the impact of numerical features on Heart Disease Risk.       
    - Applied a **chi-test** to analyze the impact of categorical features on Heart Disease Risk . 
 
-5. **Figures**  
-   - Key visualizations include:  
-     - A histogram of feature distributions.
-     - A correlation heatmap.
-     
+5. **Figures**     
 
-   Example:  
-   ![heart_disease_distribution](https://github.com/user-attachments/assets/6e59b24a-cb39-4b66-89ce-0f92bde434c9))
-   ![Heatmap](path/to/heatmap.png)
-
+- **Heart disease distribution**
+   ![heart_disease_distribution](https://github.com/user-attachments/assets/6e59b24a-cb39-4b66-89ce-0f92bde434c9)
+   - **Distribution of numerical features in the dataset**
+![distribution of numerical features in the dataset](https://github.com/user-attachments/assets/096f2b33-3531-4198-ac68-e5af5112f6a9)
+   - **Heart disease numeric features analysis **
+![heart_disease_numeric_features_analysis](https://github.com/user-attachments/assets/9044c20c-f476-4bb6-9c0c-74322adde5ee)
+   - **Heart disease categorical features analysis**
+![heart_disease__categorical_features_analysis](https://github.com/user-attachments/assets/2f958617-f291-4a99-846f-f81ceafa4939)
 6. **Processed Data**    
    - saved the following data to SQL database:
       - Heart Disease dataset and its statistical summary
