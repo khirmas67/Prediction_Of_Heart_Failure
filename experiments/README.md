@@ -1,7 +1,7 @@
 # Data Processing and Analysis
 
 ## Overview
-This project focuses on data processing and analysis for predicting heart failure outcomes. The notebook includes steps for loading, cleaning, and analyzing the dataset, as well as visualizations to interpret the results.
+This part of the project focuses on data processing and analysis for predicting heart failure outcomes. The notebook includes steps for loading, cleaning, and analyzing the dataset, as well as visualizations to interpret the results.
 
 ## Steps in the Notebook
 
@@ -28,10 +28,10 @@ This project focuses on data processing and analysis for predicting heart failur
    - Key visualizations include:  
      - A histogram of feature distributions.
      - A correlation heatmap.
-     - Box plots to highlight outliers.
+     
 
    Example:  
-   ![Histogram](path/to/histogram.png)  
+   ![heart_disease_distribution](reports/visualizations/heart_disease_distribution.png)  
    ![Heatmap](path/to/heatmap.png)
 
 6. **Processed Data**    
@@ -53,9 +53,4 @@ This project focuses on data processing and analysis for predicting heart failur
 ## Results
 
 
----
 
-![Figure Title](path/to/figure.png)
-```
-
----
