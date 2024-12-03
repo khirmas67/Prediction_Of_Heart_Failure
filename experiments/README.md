@@ -1,7 +1,3 @@
-Here’s a general outline for a `README.md` file based on your uploaded notebook, assuming it involves data processing and analysis:
-
----
-
 # Data Processing and Analysis
 
 ## Overview
