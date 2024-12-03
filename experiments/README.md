@@ -13,16 +13,16 @@ This project focuses on data processing and analysis for predicting heart failur
    - Removed duplicates using `pandas.DataFrame.duplicated()`.  
    - Handled missing values by imputing or dropping rows/columns.  
 
-3. **Exploratory Data Analysis (EDA)**  
-   - Visualized data distributions using histograms and box plots.  
-   - Checked correlations between features using a heatmap.  
+
+3. **Exploratory Data Analysis (EDA)**
+   - Visualized the distribution of the categories (0 = No heart disease, 1 = Heart disease) of target variable
+   - Visualized the distribution of numerical features
+   - Visualized Distribution of numerical features with respect to the target variable (HeartDisease) categories
+   
 
 4. **Statistical Analysis**  
-   - Applied a **t-test** to compare means of different groups within the dataset.  
-     \[
-     t = \frac{\bar{X}_1 - \bar{X}_2}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}
-     \]  
-   - Evaluated p-values to determine statistical significance.
+   - Applied a **t-test** to analyze the impact of numerical features on Heart Disease Risk.       
+   - Applied a **chi-test** to analyze the impact of categorical features on Heart Disease Risk . 
 
 5. **Figures**  
    - Key visualizations include:  
@@ -34,8 +34,11 @@ This project focuses on data processing and analysis for predicting heart failur
    ![Histogram](path/to/histogram.png)  
    ![Heatmap](path/to/heatmap.png)
 
-6. **Processed Data**  
-   - Saved the cleaned and preprocessed data as a new CSV file for further analysis or modeling.
+6. **Processed Data**    
+   - saved the following data to SQL database:
+      - Heart Disease dataset and its statistical summary
+      - Numerical features
+      - Categorical features
 
 ## Dependencies
 - Python 3.8+
@@ -45,30 +48,14 @@ This project focuses on data processing and analysis for predicting heart failur
   - `matplotlib`
   - `seaborn`
 
-## Usage
-1. Clone this repository:  
-   ```bash
-   git clone <repository_url>
-   ```
-2. Open the Jupyter notebook:  
-   ```bash
-   jupyter notebook data_processing.ipynb
-   ```
+
 
 ## Results
-The analysis provided insights into the features influencing heart failure predictions and served as a foundation for building predictive models.
 
-## License
-This project is licensed under the MIT License.
 
 ---
 
-### Embedding Figures
-To include figures in your `README.md`, save them from your notebook using `matplotlib` or your visualization tool, then reference them as shown below:
-```markdown
 ![Figure Title](path/to/figure.png)
 ```
 
 ---
-
-Would you like me to assist in exporting any plots from your notebook?
