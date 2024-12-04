@@ -11,9 +11,6 @@ def plot_and_save_histograms(data, features, output_file, title_prefix="Distribu
     - output_file (str): Path to save the output figure.
     - title_prefix (str): Prefix for the titles of subplots.
     - color (str): Color of the histograms.
-    
-    Returns:
-    - None
     """
 
     
