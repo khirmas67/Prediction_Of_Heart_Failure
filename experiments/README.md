@@ -45,9 +45,9 @@ This part of the project focuses on data processing and analysis for predicting 
       - Numerical features
       - Categorical features
 
-# (II) - How to use helper finctions
+# (II) - How to use helper finctions (please see src folder).
 
-# (III) KNN Classification Notebook
+# (III) -  KNN Classification Notebook
 
 
 ## Dependencies
