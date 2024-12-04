@@ -1,4 +1,6 @@
-# Data Processing and Analysis
+This file contains description of the following:
+---
+# (I) Data Processing and Analysis
 
 ## Overview
 This part of the project focuses on data processing and analysis for predicting heart failure outcomes. The notebook includes steps for loading, cleaning, and analyzing the dataset, as well as visualizations to interpret the results.
@@ -42,6 +44,11 @@ This part of the project focuses on data processing and analysis for predicting 
       - Heart Disease dataset and its statistical summary
       - Numerical features
       - Categorical features
+
+# (II) - How to use helper finctions
+
+# (III) KNN Classification Notebook
+
 
 ## Dependencies
 - Python 3.8+
