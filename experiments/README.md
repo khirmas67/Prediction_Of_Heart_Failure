@@ -1,15 +1,6 @@
 This file contains description of the following:
 ---
 
-
-# (II) - How to use helper finctions (please see src folder).
-
-# (III) -  KNN Classification Notebook
-
-
-
-
-
 ## I - Data Exploration and Preprocessing ( notebook : data_processing ):
 
 This notebook explores and preprocesses a dataset related to heart disease prediction. It includes:
@@ -91,7 +82,8 @@ This notebook requires the following Python libraries:
 
 ![heart_disease__categorical_features_analysis](https://github.com/user-attachments/assets/2f958617-f291-4a99-846f-f81ceafa4939)
 
-## I - The models ( notebookes : all_models_and_comaparison, all_models_and_comaparison_1 ):
+
+### II - The models ( notebookes : all_models_and_comaparison, all_models_and_comaparison_1 ):
 
 Theses notebook explores the performance of various machine learning algorithms for predicting heart disease using a heart disease dataset. The algorithms evaluated are:
 
