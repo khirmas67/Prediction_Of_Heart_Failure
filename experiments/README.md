@@ -1,30 +1,81 @@
 This file contains description of the following:
 ---
-# (I) Data Processing and Analysis
-
-## Overview
-This part of the project focuses on data processing and analysis for predicting heart failure outcomes. The notebook includes steps for loading, cleaning, and analyzing the dataset, as well as visualizations to interpret the results.
-
-## Steps in the Notebook
-
-1. **Loading the Data**  
-   - Imported the dataset using `pandas`.  
-   - Verified the structure and checked for missing values or anomalies. 
-
-2. **Data Cleaning**  
-   - Removed duplicates using `pandas.DataFrame.duplicated()`.  
-   - Handled missing values by imputing or dropping rows/columns.  
 
 
-3. **Exploratory Data Analysis (EDA)**
-   - Visualized the distribution of the categories (0 = No heart disease, 1 = Heart disease) of target variable
-   - Visualized the distribution of numerical features
-   - Visualized Distribution of numerical features with respect to the target variable (HeartDisease) categories
-   
+# (II) - How to use helper finctions (please see src folder).
 
-4. **Statistical Analysis**  
-   - Applied a **t-test** to analyze the impact of numerical features on Heart Disease Risk.       
-   - Applied a **chi-test** to analyze the impact of categorical features on Heart Disease Risk . 
+# (III) -  KNN Classification Notebook
+
+
+
+
+
+## I - Data Exploration and Preprocessing ( notebook : data_processing ):
+
+This notebook explores and preprocesses a dataset related to heart disease prediction. It includes:
+
+* Importing required libraries
+* Loading and inspecting the heart disease dataset
+* Handling missing values (if any)
+* Identifying target variable, numerical and categorical features
+* Visualizing the data distribution
+* Performing Chi-Square tests for categorical features
+
+### Dependencies
+
+This notebook requires the following Python libraries:
+
+* pandas
+* numpy
+* seaborn
+* sqlite3
+* matplotlib.pyplot
+* matplotlib.colors
+* sklearn.preprocessing
+* sklearn.neighbors
+* sklearn.metrics
+* sklearn.model_selection
+* sklearn.pipeline
+* sklearn.compose
+
+### Data Exploration and Preprocessing
+
+1. **Importing Libraries:** The notebook starts by importing the necessary libraries for data manipulation, visualization, and model building.
+
+2. **Loading Data:** The heart disease dataset is loaded using pandas and stored in a DataFrame named `heart_data`.
+
+3. **Data Inspection:**
+   - Checks for duplicate rows in the dataset.
+   - Displays information about the DataFrame, including data types and missing values.
+   - Generates a summary of the numerical features using descriptive statistics.
+   - Converts the summary statistics into an SQL table and saves it to a database.
+
+4. **Data Cleaning:** 
+   - Verifies there are no missing values in the dataset.
+
+5. **Feature Engineering:**
+   - Identifies the target variable (HeartDisease) and separates it from the other features.
+   - Categorizes the features into numerical and categorical.
+
+6. **Data Visualization:**
+   - Visualizes the distribution of the target variable (heart disease vs. no heart disease).
+   - Creates histograms to explore the distribution of numerical features.
+   - Creates KDE plots to analyze the distribution of numerical features with respect to the target variable.
+   - Generates bar charts to visualize the distribution of categorical features and their relationship to the target variable.
+
+7. **Statistical Analysis:**
+   - Performs T-tests to compare the means of numerical features between groups with and without heart disease.
+   - Conducts Chi-Square tests to assess the association between categorical features and the target variable.
+
+8. **Data Storage:**
+   - saved the following data to SQL database:
+      - Heart Disease dataset and its statistical summary
+      - Numerical features
+      - Categorical features
+**Note:** The notebook includes comments explaining each step of the process for better understanding.
+
+
+
 
 5. **Figures**     
 
@@ -39,24 +90,39 @@ This part of the project focuses on data processing and analysis for predicting 
    - **Heart disease categorical features analysis**
 
 ![heart_disease__categorical_features_analysis](https://github.com/user-attachments/assets/2f958617-f291-4a99-846f-f81ceafa4939)
-6. **Processed Data**    
-   - saved the following data to SQL database:
-      - Heart Disease dataset and its statistical summary
-      - Numerical features
-      - Categorical features
 
-# (II) - How to use helper finctions (please see src folder).
+## I - The models ( notebookes : all_models_and_comaparison, all_models_and_comaparison_1 ):
 
-# (III) -  KNN Classification Notebook
+Theses notebook explores the performance of various machine learning algorithms for predicting heart disease using a heart disease dataset. The algorithms evaluated are:
+
+    Random Forest
+    Logistic Regression
+    K-Nearest Neighbors (KNN)
+    Neural Network
+
+The notebook performs the following steps:
+
+    Import Libraries: Imports necessary libraries for data manipulation, model building, evaluation, and visualization.
+    Load, Split, and Preprocess Data: Loads the heart disease data, splits it into training and testing sets, and preprocesses the data using standard scaling and one-hot encoding for categorical features.
+    Random Forest:
+        Creates a Random Forest classifier with hyperparameter tuning using GridSearchCV.
+        Evaluates the best model on the test set and reports performance metrics including accuracy, precision, recall, and AUC-ROC score.
+        Saves the best model using pickle.
+    Logistic Regression:
+        Creates a Logistic Regression classifier with hyperparameter tuning using GridSearchCV.
+        Evaluates the best model on the test set and reports performance metrics.
+        Saves the best model using pickle.
+    KNN:
+        Creates a KNN classifier with hyperparameter tuning using GridSearchCV.
+        Evaluates the best model on the test set and reports performance metrics.
+        Saves the best model using pickle.
+    Neural Network:
+        Defines a function to create a sequential neural network model with variable hidden layer sizes.
+        Creates a KerasClassifier wrapper for the neural network with hyperparameter tuning using GridSearchCV.
+        Evaluates the best model on the test set and reports performance metrics.
+        Saves the best model using pickle.
 
 
-## Dependencies
-- Python 3.8+
-- Libraries:  
-  - `pandas`
-  - `numpy`
-  - `matplotlib`
-  - `seaborn`
+After finding the best model for each classifier a comaprison is made between them to find the best from them     
 
-
-
+Note: The notebook includes warnings related to TensorFlow restoring checkpoint values. These warnings can be ignored for the purpose of this analysis.
