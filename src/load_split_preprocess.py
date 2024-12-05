@@ -12,11 +12,6 @@ def load_and_preprocess_data(data_path):
 
     Parameters:
     - data_path (str): Path to the CSV file.
-    - numerical_features (list): List of numerical feature column names.
-    - categorical_features (list): List of categorical feature column names.
-    - target_variable (str): Name of the target column.
-    - test_size (float): Proportion of the dataset to be used as the test set.
-    - random_state (int): Random seed for reproducibility.
 
     Returns:
     - X_train (DataFrame): Preprocessed training features.
