@@ -5,15 +5,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split, GridSearchCV
 import seaborn as sns
-from sklearn.metrics import accuracy_score, precision_score, recall_score, roc_auc_score, roc_curve, confusion_matrix
+from sklearn.metrics import accuracy_score, precision_score, \
+    recall_score, roc_auc_score, roc_curve, confusion_matrix
 import joblib 
 import os
 
 # Run the script
-os.system("python model_KNN.py")
+'''os.system("python model_KNN.py")
 os.system("python model_neural_network.py")
 os.system("python model_logistic_regression.py")
-os.system("python model_Random_forest.py")
+os.system("python model_Random_forest.py")'''
 
 # Function to load models from .pkl files
 def load_model(filepath):
