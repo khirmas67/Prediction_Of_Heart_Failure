@@ -83,7 +83,16 @@ This notebook requires the following Python libraries:
 ![heart_disease__categorical_features_analysis](https://github.com/user-attachments/assets/2f958617-f291-4a99-846f-f81ceafa4939)
 
 
-### II - The models ( notebookes : all_models_and_comaparison, all_models_and_comaparison_1 ):
+### II - The models ( notebookes : all_models_and_comaparison, all_models_and_comaparison_1 , experimental_model_neural_network, experimental_model_Logistic, experimental_models_KNN_and_RandomForest):
+
+In the `experimental_model_neural_network`, `experimental_model_Logistic` and  `experimental_models_KNN_and_RandomForest` notebooks, I experimented with various baseline models and tested the processors in `experimental_models_KNN_and_RandomForest` to select the best processor. wich I used in `all_models_and_comparison` and `all_models_and_comparison_1`.
+![image](https://github.com/user-attachments/assets/8463dc45-7ba2-4910-9a63-1095d369f7f5)
+
+
+![image](https://github.com/user-attachments/assets/ce9fcca9-31bb-47b7-8ac8-2c641ea838f2)
+
+
+
 
 In the `all_models_and_comparison` notebook, I experimented with various models without explicitly addressing overfitting. I added cross-validation (CV) scores, compared training accuracy with test accuracy, and included the AUC score for the training set to assess performance. In contrast, in the `all_models_and_comparison_1` notebook, I further optimized the models to mitigate overfitting. Both notebooks explore the performance of various machine learning algorithms for predicting heart disease using a heart disease dataset. The evaluated algorithms include:
 
@@ -96,25 +105,85 @@ The notebooks perform the following steps:
 
     Import Libraries: Imports necessary libraries for data manipulation, model building, evaluation, and visualization.
     Load, Split, and Preprocess Data: Loads the heart disease data, splits it into training and testing sets, and preprocesses the data using standard scaling and one-hot encoding for categorical features.
+
     Random Forest:
         Creates a Random Forest classifier with hyperparameter tuning using GridSearchCV.
         Evaluates the best model on the test set and reports performance metrics including accuracy, precision, recall, and AUC-ROC score.
         Saves the best model using pickle.
-    Logistic Regression:
+
+        Best Parameters Found:
+            {'classifier__max_depth': 3, 'classifier__min_samples_leaf': 20, 'classifier__min_samples_split': 20, 'classifier__n_estimators': 100}
+            Train Accuracy: 0.8638
+            Test Accuracy: 0.9239
+            Mean Cross-Validation Accuracy: 0.8515
+            Precision: 0.9048
+            Recall: 0.9596
+            AUC Score_test: 0.9755
+            AUC Score_train: 0.9755
+
+         conclusion:
+         a difference of just 0.01 between training and validation accuracy is typically a good sign of balanced performance, not overfitting.
+
+   Logistic Regression:
         Creates a Logistic Regression classifier with hyperparameter tuning using GridSearchCV.
         Evaluates the best model on the test set and reports performance metrics.
         Saves the best model using pickle.
+
+         Best Parameters Found:
+            {'classifier__C': 0.19144819761699575, 'classifier__penalty': 'l2', 'classifier__solver': 'liblinear'}
+            Mean Cross-Validation Accuracy: 0.8570
+            Train Accuracy: 0.8638
+            Test Accuracy: 0.9076
+            Precision: 0.9271
+            Recall: 0.8990
+            AUC Score_test: 0.9697
+            AUC Score_train: 0.9697
+
+         conclusion:
+         a difference of just 0.0068 between training and validation accuracy is typically a good sign of balanced performance, not overfitting.
+
     KNN:
         Creates a KNN classifier with hyperparameter tuning using GridSearchCV.
         Evaluates the best model on the test set and reports performance metrics.
         Saves the best model using pickle.
+
+         Best Parameters Found:
+            {'classifier__n_neighbors': 20}
+            Mean Cross-Validation Accuracy: 0.8638
+            Train Accuracy: 0.8638
+            Test Accuracy: 0.9076
+            Precision: 0.9362
+            Recall: 0.8889
+            AUC Score_test: 0.9700
+            AUC Score_train: 0.9700
+
+         conclusion:
+         a difference of just 0 between training and validation accuracy is typically a good sign of balanced performance, not overfitting.
+
+
     Neural Network:
         Defines a function to create a sequential neural network model with variable hidden layer sizes.
         Creates a KerasClassifier wrapper for the neural network with hyperparameter tuning using GridSearchCV.
         Evaluates the best model on the test set and reports performance metrics.
         Saves the best model using pickle.
 
+        Best Parameters Found:
+            {'classifier__batch_size': 32, 'classifier__epochs': 100}
+            Some variables were not restored.
+            Mean Cross-Validation Accuracy: 0.8447
+            Train Accuracy: 0.8488
+            Test Accuracy: 0.8859
+            Precision: 0.8750
+            Recall: 0.9192
+            AUC Score_test: 0.9626
+            AUC Score_train: 0.9626 
 
-After finding the best model for each classifier a comaprison is made between them to find the best from them     
+         conclusion:
+         a difference of just 0.0041 between training and validation accuracy is typically a good sign of balanced performance, not overfitting.
+
+After finding the best model for each classifier a comaprison is made between them to find the best from them  
+
+### **The best model was: Random Forest**
+
 
 Note: The notebook includes warnings related to TensorFlow restoring checkpoint values. These warnings can be ignored for the purpose of this analysis.
