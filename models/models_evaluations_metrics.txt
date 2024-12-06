@@ -1,0 +1,70 @@
+Random Forest:
+
+
+        Best Parameters Found:
+            {'classifier__max_depth': 3, 'classifier__min_samples_leaf': 20, 'classifier__min_samples_split': 20, 'classifier__n_estimators': 100}
+            Train Accuracy: 0.8638
+            Test Accuracy: 0.9239
+            Mean Cross-Validation Accuracy: 0.8515
+            Precision: 0.9048
+            Recall: 0.9596
+            AUC Score_test: 0.9755
+            AUC Score_train: 0.9755
+
+         conclusion:
+         a difference of just 0.01 between training and validation accuracy is typically a good sign of balanced performance, not overfitting.
+
+   Logistic Regression:
+  
+
+         Best Parameters Found:
+            {'classifier__C': 0.19144819761699575, 'classifier__penalty': 'l2', 'classifier__solver': 'liblinear'}
+            Mean Cross-Validation Accuracy: 0.8570
+            Train Accuracy: 0.8638
+            Test Accuracy: 0.9076
+            Precision: 0.9271
+            Recall: 0.8990
+            AUC Score_test: 0.9697
+            AUC Score_train: 0.9697
+
+         conclusion:
+         a difference of just 0.0068 between training and validation accuracy is typically a good sign of balanced performance, not overfitting.
+
+    KNN:
+
+
+         Best Parameters Found:
+            {'classifier__n_neighbors': 20}
+            Mean Cross-Validation Accuracy: 0.8638
+            Train Accuracy: 0.8638
+            Test Accuracy: 0.9076
+            Precision: 0.9362
+            Recall: 0.8889
+            AUC Score_test: 0.9700
+            AUC Score_train: 0.9700
+
+         conclusion:
+         a difference of just 0 between training and validation accuracy is typically a good sign of balanced performance, not overfitting.
+
+
+    Neural Network:
+        
+
+        Best Parameters Found:
+            {'classifier__batch_size': 32, 'classifier__epochs': 100}
+            Some variables were not restored.
+            Mean Cross-Validation Accuracy: 0.8447
+            Train Accuracy: 0.8488
+            Test Accuracy: 0.8859
+            Precision: 0.8750
+            Recall: 0.9192
+            AUC Score_test: 0.9626
+            AUC Score_train: 0.9626 
+
+         conclusion:
+         a difference of just 0.0041 between training and validation accuracy is typically a good sign of balanced performance, not overfitting.
+
+
+After finding the best model for each classifier a comaprison is made between them to find the best from them  
+
+### **The best model was: Random Forest**

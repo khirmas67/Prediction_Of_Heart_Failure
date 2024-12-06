@@ -1,5 +1,5 @@
 
-**This folder contains all the data required for the project. It is organized into three subfolders: **
+**This folder contains all the data required for the project. It is organized into three subfolders:**
 
 ### 1. **raw**
    - This folder contains the original, unprocessed data.     
