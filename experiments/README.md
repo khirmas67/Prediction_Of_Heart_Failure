@@ -85,15 +85,10 @@ This notebook requires the following Python libraries:
 
 ### II - The models ( notebookes : all_models_and_comaparison, all_models_and_comaparison_1 , experimental_model_neural_network, experimental_model_Logistic, experimental_models_KNN_and_RandomForest):
 
-In the `experimental_model_neural_network`, `experimental_model_Logistic` and  `experimental_models_KNN_and_RandomForest` notebooks, I experimented with various baseline models and tested the processors in `experimental_models_KNN_and_RandomForest` to select the best processor. wich I used in `all_models_and_comparison` and `all_models_and_comparison_1`.
+In the `experimental_model_neural_network`, `experimental_model_Logistic` and  `experimental_models_KNN_and_RandomForest` notebooks, I experimented with various baseline models and tested the processors in `experimental_models_KNN_and_RandomForest` to select the best processor. which I used in `all_models_and_comparison` and `all_models_and_comparison_1`:
 ![image](https://github.com/user-attachments/assets/8463dc45-7ba2-4910-9a63-1095d369f7f5)
 
-
-![image](https://github.com/user-attachments/assets/ce9fcca9-31bb-47b7-8ac8-2c641ea838f2)
-
-
-
-
+<img src="https://github.com/user-attachments/assets/8463dc45-7ba2-4910-9a63-1095d369f7f5" width="400" />
 In the `all_models_and_comparison` notebook, I experimented with various models without explicitly addressing overfitting. I added cross-validation (CV) scores, compared training accuracy with test accuracy, and included the AUC score for the training set to assess performance. In contrast, in the `all_models_and_comparison_1` notebook, I further optimized the models to mitigate overfitting. Both notebooks explore the performance of various machine learning algorithms for predicting heart disease using a heart disease dataset. The evaluated algorithms include:
 
     Random Forest
