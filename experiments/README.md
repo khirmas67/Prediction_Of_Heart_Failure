@@ -85,14 +85,14 @@ This notebook requires the following Python libraries:
 
 ### II - The models ( notebookes : all_models_and_comaparison, all_models_and_comaparison_1 ):
 
-Theses notebook explores the performance of various machine learning algorithms for predicting heart disease using a heart disease dataset. The algorithms evaluated are:
+In the `all_models_and_comparison` notebook, I experimented with various models without explicitly addressing overfitting. I added cross-validation (CV) scores, compared training accuracy with test accuracy, and included the AUC score for the training set to assess performance. In contrast, in the `all_models_and_comparison_1` notebook, I further optimized the models to mitigate overfitting. Both notebooks explore the performance of various machine learning algorithms for predicting heart disease using a heart disease dataset. The evaluated algorithms include:
 
     Random Forest
     Logistic Regression
     K-Nearest Neighbors (KNN)
     Neural Network
 
-The notebook performs the following steps:
+The notebooks perform the following steps:
 
     Import Libraries: Imports necessary libraries for data manipulation, model building, evaluation, and visualization.
     Load, Split, and Preprocess Data: Loads the heart disease data, splits it into training and testing sets, and preprocesses the data using standard scaling and one-hot encoding for categorical features.
