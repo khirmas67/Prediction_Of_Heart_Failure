@@ -179,6 +179,3 @@ The notebooks perform the following steps:
 After finding the best model for each classifier a comaprison is made between them to find the best from them  
 
 ### **The best model was: Random Forest**
-
-
-Note: The notebook includes warnings related to TensorFlow restoring checkpoint values. These warnings can be ignored for the purpose of this analysis.
