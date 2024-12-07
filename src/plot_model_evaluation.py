@@ -20,7 +20,7 @@ from sklearn.metrics import  roc_auc_score, roc_curve, accuracy_score,\
     recall_score, precision_score, confusion_matrix
     
 def plot_model_evaluation(model_name, y_test, y_pred, y_pred_prob, test_accuracy, \
-    precision, recall, output_dir="../final_visualizations/reports"):
+    precision, recall, output_dir="../visualizations_test/reports"):
     """
     Generate evaluation plots for each model.
 
