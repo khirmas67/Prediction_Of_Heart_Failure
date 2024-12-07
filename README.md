@@ -111,7 +111,7 @@ Feel free to reach out if you have any questions or feedback:
 
 https://drive.google.com/file/d/1zAGJU20T4gPiQutDFkGph8t0_Z0UzCZF/view?usp=drive_link
 
- [Watch the Project Video: Prediction of Heart Failure](https://drive.google.com/file/d/your_file_id/view?usp=sharing)
+The Project Video: Prediction of Heart  : (https://drive.google.com/file/d/your_file_id/view?usp=sharing)
 
 
    
