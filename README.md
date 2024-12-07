@@ -53,8 +53,7 @@ The dataset used in this project is available on [Kaggle](https://www.kaggle.com
 The distribution of numerical features with respect to the target variable (HeartDisease) is shown in the figure below:
 ![heart_disease_numeric_features_analysis](https://github.com/user-attachments/assets/caf41bff-79a2-4421-8c5b-e34229c38462)
 
-The Impact of Categorical Features on Heart Disease isshown on the bar charts below:
-![heart_disease__categorical_features_analysis](https://github.com/user-attachments/assets/7796aa0f-40e2-43d8-88b8-8f6923c9b265)
+The distribution of numerical features with respect to the target variable (HeartDisease) is shown in the figure below:![heart_disease__categorical_features_analysis](https://github.com/user-attachments/assets/7796aa0f-40e2-43d8-88b8-8f6923c9b265)
 
 The **target variable (HeartDisease** indicates whether heart failure was detected (binary: No = 0, Yes = 1).
 The pie chart below represents the distribution of heart disease and no heart disease cases in the dataset. It shows shows that approximately 55.3% of the cases in the dataset have heart disease, while 44.7% do not
@@ -75,7 +74,7 @@ The pie chart below represents the distribution of heart disease and no heart di
 
 
 ## **The results:** 
-
+ ```
 1.Random Forest 
    i.Best Parameters: max_depth=3, min_samples_leaf=20, n_estimators=100
    ii.Performance: Train Accuracy: 86.38%, Test Accuracy: 92.39%, AUC-ROC: 0.9755
@@ -89,7 +88,7 @@ The pie chart below represents the distribution of heart disease and no heart di
    i.Best Parameters: batch_size=32, epochs=100
    ii.Performance: Train Accuracy: 84.88%, Test Accuracy: 88.59%, AUC-ROC: 0.9626
 
-
+ ```
 ## **Conclusion**
 The Random Forest classifier was identified as the best-performing model, achieving a 92.39% test accuracy and an AUC-ROC of 0.9755. This model provides a reliable tool for predicting heart failure risk, which can benefit pharmaceutical companies in improving clinical trial participant selection and optimizing treatment strategies.
 
