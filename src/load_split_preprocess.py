@@ -21,7 +21,7 @@ def load_and_preprocess_data(data_path):
     - preprocessor (ColumnTransformer): Preprocessing pipeline.
     """
     
-        # Load data
+    # Load data
     heart_data = pd.read_csv(data_path)
 
     # Define features and target

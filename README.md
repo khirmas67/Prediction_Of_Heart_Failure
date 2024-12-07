@@ -200,7 +200,7 @@ plt.show()
 ## **The results:** 
  ```
 1.Random Forest 
-Mean Cross-Validation Accuracy: 0.8515
+      Mean Cross-Validation Accuracy: 0.8515
       Train Accuracy: 0.8638
       Test Accuracy: 0.9239        
       Precision: 0.9048
