@@ -15,7 +15,7 @@ This repository contains reusable helper functions to streamline various data pr
    - [Histogram Plot for Numerical Features](#4-histogram-plot-for-numerical-features)
    - [Count Plot for Categorical Features](#5-count-plot-for-categorical-features)
    - [Stacked Histogram Plot for Numerical Features](#6-stacked-histogram-plot-for-numerical-features)
-3. [Usage Examples](#usage-examples)
+3. [Models codes](#Models-codes) 
 4. [Folder Structure](#folder-structure)
 5. [Contributing](#contributing)
 
@@ -23,12 +23,7 @@ This repository contains reusable helper functions to streamline various data pr
 
 ## **Installation**
 
-To use the helper functions, ensure the following are installed in your environment:
-
-- Python 3.8 or higher
-- Required libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`, `sqlite3`
-
-Install dependencies:
+To use the helper functions, Install  the dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -145,6 +140,15 @@ def plot_stacked_histograms(df, numeric_features, hue, output_path):
   - `output_path`: Path to save the plot.
 
 ---
+## **Models codes**
+ 
+1. model_KNN.py
+2. model_logistic_regression.py
+3. model_neural_network.py
+4. model_Random_forest.py
+5. model_comparison.py
+
+he first four codes are used to train and evaluate specific machine learning models (KNN, Random Forest, Logistic Regression, and Neural Network), respectively. The fifth code compares the performance of these models and selects the best one based on defined evaluation metrics.
 
 ## **Folder Structure**
 
