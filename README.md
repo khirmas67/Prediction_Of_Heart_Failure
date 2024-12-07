@@ -12,7 +12,6 @@
 ## **Overview**
 This project aims to develop machine learning models for predicting heart failure risk using patient clinical data, then choose the one with the best performance metrics. The candidate algorithms to develop these models are:  K-Nearest Neighbors , Random Forest ,  Logistic Regression and  Neural Network.  Such predictions can assist pharmaceutical companies in optimizing clinical trial participant selection and improving treatment effectiveness.
 
-
  
 ## **Business Case: Pharmaceutical Industry**
 In the pharmaceutical industry, **identifying target patients** is very important for the success of clinical trials and drug treatments. The machine learning model in this project provides several benefits:  
@@ -72,7 +71,6 @@ The pie chart below represents the distribution of heart disease and no heart di
    pip install -r requirements.txt 
    ```
 
-
 ## **The results:** 
  ```
 1.Random Forest 
@@ -92,7 +90,6 @@ The pie chart below represents the distribution of heart disease and no heart di
 ## **Conclusion**
 The Random Forest classifier was identified as the best-performing model, achieving a 92.39% test accuracy and an AUC-ROC of 0.9755. This model provides a reliable tool for predicting heart failure risk, which can benefit pharmaceutical companies in improving clinical trial participant selection and optimizing treatment strategies.
 
-   
 
 ## **References**
 1. Basic writing and formatting syntax [🔗](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) 
@@ -109,9 +106,9 @@ The Random Forest classifier was identified as the best-performing model, achiev
 Feel free to reach out if you have any questions or feedback:  
 **Khaled Hirmas** : https://github.com/khirmas67
 
-https://drive.google.com/file/d/1zAGJU20T4gPiQutDFkGph8t0_Z0UzCZF/view?usp=drive_link
 
-The Project Video: Prediction of Heart  : (https://drive.google.com/file/d/your_file_id/view?usp=sharing)
+The Project Video: Prediction of Heart Failure: https://drive.google.com/file/d/1zAGJU20T4gPiQutDFkGph8t0_Z0UzCZF/view?usp=drive_link
+
 
 
    
