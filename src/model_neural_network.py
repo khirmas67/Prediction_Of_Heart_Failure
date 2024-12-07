@@ -1,84 +1,35 @@
 import os
-import pandas as pd
-import numpy as np
 import warnings
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.compose import ColumnTransformer
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
-from sklearn.metrics import classification_report, roc_auc_score, roc_curve, accuracy_score, recall_score, precision_score, confusion_matrix
-import seaborn as sns
-from tensorflow.keras.models import Sequential, load_model
+import tensorflow as tf
+from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
-from tensorflow.keras.callbacks import ModelCheckpoint
-import joblib 
+from tensorflow.keras.callbacks import EarlyStopping
+from sklearn.model_selection import GridSearchCV
+from scikeras.wrappers import KerasClassifier
+from sklearn.pipeline import Pipeline
+from sklearn.metrics import accuracy_score, precision_score, recall_score, roc_auc_score, roc_curve
+import joblib
+import tempfile
+import logging
 
+warnings.filterwarnings('ignore')  # Suppress all warnings
 
-
-
-# Suppress warnings
-warnings.filterwarnings('ignore', category=UserWarning, module='tensorflow')
-
-# import load_split_preprocess helper function to load raw data, split it, then preprocess it
+#import load_split_preprocess helper function to load raw data, split it, then preprocess it
 from load_split_preprocess import load_and_preprocess_data
 X_train, X_test, y_train, y_test, preprocessor = load_and_preprocess_data("../data/processed/heart_cleaned_data.csv")
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  
-  
-  
-  
-  
-  
-  
-import pandas as pd
-import numpy as np
-import warnings
-import joblib
-import sys
-import pickle
-import seaborn as sns
-from keras.layers import Dense
-import matplotlib.pyplot as plt
-import matplotlib.colors as mcolors
-from keras.models import Sequential
-from sklearn.pipeline import Pipeline
-from sklearn.compose import ColumnTransformer
-from scikeras.wrappers import KerasClassifier
-from sklearn.neural_network import MLPClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
-from sklearn.model_selection import train_test_split, GridSearchCV, cross_validate
-from sklearn.metrics import classification_report, roc_auc_score, roc_curve, accuracy_score,\
-    recall_score, precision_score, confusion_matrix  
-    
-import warnings
-import tensorflow as tf
-import os
-from tensorflow.keras.callbacks import EarlyStopping, ModelCheckpoint
+# Set up custom temporary directory in Documents folder
+documents_dir = os.path.join(os.path.expanduser("~"), "Documents")
+custom_temp_dir = os.path.join(documents_dir, "MyTempDir")
+os.makedirs(custom_temp_dir, exist_ok=True)
+tempfile.tempdir = custom_temp_dir  # Set the default temp directory for Python
 
+# Suppress TensorFlow logs
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # Suppress INFO and WARNING messages (shows only ERRORs)
+tf.get_logger().setLevel(logging.ERROR)  # Suppress TensorFlow logging at lower levels
 
-warnings.filterwarnings('ignore')
-
-# Suppress TensorFlow logging
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Suppress INFO and WARNING messages (shows only ERRORs)
-
-# Additional logging configuration
-import logging
-tf.get_logger().setLevel(logging.ERROR)
-
+# Confirm the custom temp directory
+print(f"Custom temporary directory set to: {custom_temp_dir}")
 
 # To get the correct number of input features after one-hot encoding
 X_train_transformed = preprocessor.fit_transform(X_train)
@@ -87,7 +38,6 @@ input_dim = X_train_transformed.shape[1]  # Number of features after preprocessi
 # Function to create the Sequential model
 def create_nn_model(hidden_layer_sizes=(64, 128)):
     model = Sequential()
-    # Add input layer (with number of features as input_dim)
     model.add(Dense(64, input_dim=input_dim, activation='relu'))  # First hidden layer
     for units in hidden_layer_sizes:
         model.add(Dense(units, activation='relu'))  # Additional hidden layers
@@ -105,23 +55,14 @@ early_stopping = EarlyStopping(
     restore_best_weights=True  # Restore the model weights from the epoch with the best value
 )
 
-# ModelCheckpoint callback
-checkpoint = ModelCheckpoint(
-    filepath='../best_nn_model_checkpoint',  # File path to save the model
-    monitor='val_loss',  # Monitor validation loss
-    save_best_only=True,  # Only save the best model based on validation loss
-    verbose=0,  #  verbose = 1 Print messages when the model is saved
-    save_weights_only=False  # Save the entire model (including architecture, optimizer, and weights)
-)
-
-# Create a KerasClassifier wrapper for the neural network with EarlyStopping and ModelCheckpoint
+# Create a KerasClassifier wrapper for the neural network with EarlyStopping
 nn_classifier = KerasClassifier(
     build_fn=create_nn_model, 
     epochs=200, 
     batch_size=32, 
     verbose=0, 
     validation_split=0.2,  # Use 20% of training data for validation
-    callbacks=[early_stopping, checkpoint]  # Add both callbacks
+    callbacks=[early_stopping]  # Only using EarlyStopping callback
 )
 
 # Create a pipeline
@@ -149,27 +90,8 @@ best_nn_model = grid_search.best_estimator_
 # Extract the Keras model from the pipeline
 keras_model = best_nn_model.named_steps["classifier"].model_
 
-
 if keras_model is None:
     raise ValueError("The Keras model could not be extracted. Ensure the classifier is properly fitted.")
-
-# Create a TensorFlow Checkpoint
-checkpoint = tf.train.Checkpoint(model=keras_model)
-
-# Define the path to the checkpoint directory
-checkpoint_path = '../models/best_nn_model_checkpoint'
-
-# Restore the checkpoint
-status = checkpoint.restore(checkpoint_path)
-
-# Check if all variables are restored
-try:
-    status.assert_consumed()
-    print("All variables restored successfully.")
-except AssertionError:
-    print("Some variables were not restored.")
-
-
 
 # Predictions
 y_pred = best_nn_model.predict(X_test)
@@ -198,13 +120,12 @@ print(f"AUC Score_test: {auc_score:.4f}")
 
 y_pred_prob_train = best_nn_model.predict_proba(X_train)[:, 1]
 auc_score_train = roc_auc_score(y_train, y_pred_prob_train)
-print(f"AUC Score_train: {auc_score:.4f}")
+print(f"AUC Score_train: {auc_score_train:.4f}")
 
 # Plot ROC Curve
 fpr, tpr, _ = roc_curve(y_test, y_pred_prob)
 
 # Plot confusion matrix, AUC_ROC, (accuracy, recall, and precision) for the best model
-
 from plot_model_evaluation import plot_model_evaluation 
 
 plot_model_evaluation(
@@ -221,4 +142,9 @@ plot_model_evaluation(
 with open('../models/best_nn_model.pkl', 'wb') as file:
     joblib.dump(best_nn_model, file)
     print("Best model saved as 'best_nn_model.pkl'")
+    
+    
+    
+    
+    
     

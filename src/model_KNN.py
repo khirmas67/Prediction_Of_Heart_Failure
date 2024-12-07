@@ -20,8 +20,8 @@ warnings.filterwarnings("ignore")
 
 # import load_split_preprocess helper function to load raw data, split it, then preprocess it
 from load_split_preprocess import load_and_preprocess_data
-X_train, X_test, y_train, y_test, preprocessor = load_and_preprocess_data("../data/processed/heart_cleaned_data.csv")
-
+X_train, X_test, y_train, y_test, preprocessor = load_and_preprocess_data("../data/processed/heart_cleaned_data.csv")    
+    
 # Create a KNN classifier
 knn = KNeighborsClassifier()
 
@@ -31,8 +31,7 @@ pipeline = Pipeline(steps=[("preprocessor", preprocessor), ("classifier", knn)])
 # Define parameter grid for KNN classifier
 param_grid = {
     'classifier__n_neighbors': np.arange(2, 50, 2),  # Varying n_neighbors
-    'classifier__weights': ['uniform', 'distance'],  # Varying the weights
-    'classifier__metric': ['euclidean', 'manhattan'],  # Different distance metrics
+   
 }
 
 # Grid search for best parameters
@@ -51,8 +50,15 @@ best_knn_model = grid_search.best_estimator_
 # Test predictions
 y_pred = best_knn_model.predict(X_test)
 
+# Perform cross-validation
+from sklearn.model_selection import cross_val_score
+cv_scores = cross_val_score(best_knn_model, X_train, y_train, cv=5, scoring='accuracy')
+print(f"Mean Cross-Validation Accuracy: {cv_scores.mean():.4f}")
+
 # Test accuracy on the best model
-test_accuracy = accuracy_score(y_test, y_pred)
+train_accuracy = accuracy_score(y_train, best_knn_model.predict(X_train))
+test_accuracy = accuracy_score(y_test, best_knn_model.predict(X_test))
+print(f"Train Accuracy: {train_accuracy:.4f}")
 print(f"Test Accuracy: {test_accuracy:.4f}")
 
 # Calculate precision and recall
@@ -61,17 +67,21 @@ recall = recall_score(y_test, y_pred)
 print(f"Precision: {precision:.4f}")
 print(f"Recall: {recall:.4f}")
 
+
 # Calculate AUC for the best model
 y_pred_prob = best_knn_model.predict_proba(X_test)[:, 1]
 auc_score = roc_auc_score(y_test, y_pred_prob)
-print(f"AUC Score: {auc_score:.4f}")
+print(f"AUC Score_test: {auc_score:.4f}")
 
-# Plot ROC Curve
+y_pred_prob_train = best_knn_model.predict_proba(X_train)[:, 1]
+auc_score_train = roc_auc_score(y_train, y_pred_prob_train)
+print(f"AUC Score_train: {auc_score:.4f}")
+
 fpr, tpr, _ = roc_curve(y_test, y_pred_prob)
 
-# import the helper function
+# import the plot_model_evaluation helper function
 from plot_model_evaluation import plot_model_evaluation 
-
+# Plot confusion matrix, AUC_ROC, (accuracy, recall, and precision) for the best model
 plot_model_evaluation(
     model_name="KNN",
     y_test=y_test,
@@ -86,3 +96,4 @@ plot_model_evaluation(
 with open('../models/best_knn_model.pkl', 'wb') as file:
     joblib.dump(best_knn_model, file)
     print("Best model saved as 'best_knn_model.pkl'")
+        

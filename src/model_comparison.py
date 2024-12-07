@@ -1,20 +1,26 @@
+import os
+import joblib 
 import pickle
+import logging
 import warnings
-import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split, GridSearchCV
+import pandas as pd
 import seaborn as sns
+import tensorflow as tf
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, \
     recall_score, roc_auc_score, roc_curve, confusion_matrix
-import joblib 
-import os
 
 # Run the script
 os.system("python model_KNN.py")
 os.system("python model_neural_network.py")
 os.system("python model_logistic_regression.py")
 os.system("python model_Random_forest.py")
+
+# Suppress TensorFlow logs
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'  # Suppress INFO and WARNING messages (shows only ERRORs)
+tf.get_logger().setLevel(logging.ERROR)  # Suppress TensorFlow logging at lower levels
 
 # Function to load models from .pkl files
 def load_model(filepath):
@@ -24,7 +30,7 @@ def load_model(filepath):
 
 # Load the models
 models = {
-    "Neural Network": load_model("../models/best_nn_model.pkl"),
+    "Neural Network": joblib.load("../models/best_nn_model.pkl"),
     "KNN": joblib.load("../models/best_knn_model.pkl"),
     "Logistic Regression": joblib.load("../models/best_logreg_model.pkl"),
     "Random Forest": joblib.load("../models/best_rf_model.pkl")
@@ -69,6 +75,8 @@ best_metrics = model_metrics[best_model_name]
 print(f"Best Model: {best_model_name}")
 print(f"Metrics: {best_metrics}")
 
+output_dir="../reports/final_visualizations"
+
 # Plot AUC for the best model
 if best_metrics['auc_score'] is not None:
     y_pred_prob = best_model.predict_proba(X_test)[:, 1]
@@ -77,20 +85,23 @@ if best_metrics['auc_score'] is not None:
     plt.figure(figsize=(8, 6))
     plt.plot(fpr, tpr, label=f"ROC curve (AUC = {best_metrics['auc_score']:.4f})")
     plt.plot([0, 1], [0, 1], 'k--')  # Random classifier line
-    plt.title(f"ROC Curve: {best_model_name}")
+    plt.title(f"ROC Curve of the best model : {best_model_name}")
     plt.xlabel("False Positive Rate")
     plt.ylabel("True Positive Rate")
     plt.legend(loc="lower right")
     plt.grid()
+    plt.savefig(f"{output_dir}/ROC Curve of the best model_{best_model_name}.png")
     plt.show()
 
 # Plot confusion matrix for the best model
 cm = best_metrics['confusion_matrix']
 plt.figure(figsize=(6, 5))
-sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['No Heart Disease', 'Heart Disease'], yticklabels=['No Heart Disease', 'Heart Disease'])
-plt.title(f"Confusion Matrix: {best_model_name}")
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=['No Heart Disease', 'Heart Disease']\
+                                                 , yticklabels=['No Heart Disease', 'Heart Disease'])
+plt.title(f"Confusion matrix of the best model: {best_model_name}")
 plt.xlabel("Predicted")
 plt.ylabel("Actual")
+plt.savefig(f"{output_dir}/Confusion matrix of the best model_{best_model_name}.png")
 plt.show()
 
 # Plot metrics for all models
@@ -106,6 +117,7 @@ for i, metric in enumerate(metric_names):
 
 plt.xticks(x + bar_width, models.keys())
 plt.ylabel("Score")
-plt.title("Model Comparison: Accuracy, Precision, and Recall")
+plt.title("Models Comparison: Accuracy, Precision, and Recall")
 plt.legend()
+plt.savefig(f"{output_dir}/Models Comparison.png")
 plt.show()
