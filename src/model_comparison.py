@@ -71,6 +71,7 @@ for model_name, model in models.items():
 best_model_name = max(model_metrics, key=lambda name: model_metrics[name]['accuracy'])
 best_model = models[best_model_name]
 best_metrics = model_metrics[best_model_name]
+test_accuracy = model_metrics[best_model_name]['accuracy']
 
 print(f"Best Model: {best_model_name}")
 print(f"Metrics: {best_metrics}")
@@ -83,7 +84,7 @@ if best_metrics['auc_score'] is not None:
     fpr, tpr, _ = roc_curve(y_test, y_pred_prob)
 
     plt.figure(figsize=(8, 6))
-    plt.plot(fpr, tpr, label=f"ROC curve (AUC = {best_metrics['auc_score']:.4f})")
+    plt.plot(fpr, tpr, label=f"ROC curve (AUC = {auc_score:.4f}, Accuracy = {best_metrics['accuracy']:.4f})")
     plt.plot([0, 1], [0, 1], 'k--')  # Random classifier line
     plt.title(f"ROC Curve of the best model : {best_model_name}")
     plt.xlabel("False Positive Rate")

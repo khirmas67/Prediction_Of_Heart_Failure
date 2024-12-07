@@ -5,8 +5,8 @@
 2. [Project Structure](#project-structure)  
 3. [Dataset](#dataset)  
 4. [Model Evaluation and Selection](#model-evaluation-and-selection)  
-5. [How to Run the Project](#how-to-run-the-project)  
-6. [Conclusion](#conclusion)  
+5. [Conclusion](#conclusion)  
+6. [How to Run the Project](#how-to-run-the-project) 
 7. [References](#references)  
 8. [Contact](#contact)
  
@@ -56,8 +56,7 @@ The istribution of Numerical Features in Relation to Heart Disease is shown in t
 
 The distribution of Categorical Features vs Heart Disease Status is shown in the figure below:![heart_disease__categorical_features_analysis](https://github.com/user-attachments/assets/7796aa0f-40e2-43d8-88b8-8f6923c9b265)
 
-The **target variable (HeartDisease** indicates whether heart failure was detected (binary: No = 0, Yes = 1).
-The pie chart below represents the distribution of heart disease and no heart disease cases in the dataset. It shows shows that approximately 55.3% of the cases in the dataset have heart disease, while 44.7% do not
+The target variable (HeartDisease) indicates whether heart failure was detected, with binary values: No = 0 and Yes = 1. The pie chart below visualizes the distribution of heart disease cases in the dataset. Approximately 55.3% of the cases have heart disease, while 44.7% do not. This distribution highlights the imbalance in the dataset.
 
 ![heart_disease_distribution](https://github.com/user-attachments/assets/46490ede-1d9c-4711-82ec-7e6875acda73)
 
@@ -201,18 +200,49 @@ plt.show()
 ## **The results:** 
  ```
 1.Random Forest 
-   i.Best Parameters: max_depth=3, min_samples_leaf=20, n_estimators=100
-   ii.Performance: Train Accuracy: 86.38%, Test Accuracy: 92.39%, AUC-ROC: 0.9755
+Mean Cross-Validation Accuracy: 0.8515
+      Train Accuracy: 0.8638
+      Test Accuracy: 0.9239        
+      Precision: 0.9048
+      Recall: 0.9596
+      AUC Score_test: 0.9755
+      AUC Score_train: 0.9755
+      Best model saved as 'best_rf_model.pkl'
 2.Logistic Regression 
-   i.Best Parameters: C=0.19, penalty='l2', solver='liblinear'
-   ii.Performance: Train Accuracy: 86.38%, Test Accuracy: 90.76%, AUC-ROC: 0.9697
+      Mean Cross-Validation Accuracy: 0.8570
+      Train Accuracy: 0.8638
+      Test Accuracy: 0.9076
+      Precision: 0.9271
+      Recall: 0.8990
+      AUC Score_test: 0.9697
+      AUC Score_train: 0.9697
+      Best model saved as 'best_logreg_model.pkl'
 3.K-Nearest Neighbors (KNN) 
-   i.Best Parameters: n_neighbors=20
-   ii.Performance: Train Accuracy: 86.38%, Test Accuracy: 90.76%, AUC-ROC: 0.9700
+      Mean Cross-Validation Accuracy: 0.8515
+      Train Accuracy: 0.8638
+      Test Accuracy: 0.9239
+      Precision: 0.9048
+      Recall: 0.9596
+      AUC Score_test: 0.9755
+      AUC Score_train: 0.9755
 4.Neural Network 
-   i.Best Parameters: batch_size=32, epochs=100
-   ii.Performance: Train Accuracy: 84.88%, Test Accuracy: 88.59%, AUC-ROC: 0.9626
+      Mean Cross-Validation Accuracy: 0.8420
+      Train Accuracy: 0.8719
+      Test Accuracy: 0.9185
+      Precision: 0.9375
+      Recall: 0.9091
+      AUC Score_test: 0.9731
+      AUC Score_train: 0.9427
+      Best model saved as 'best_nn_model.pkl'
  ```
+## **Conclusion**
+
+In this project, we developed and evaluated multiple machine learning models to predict heart failure risk using clinical data. Among the four models—Random Forest, K-Nearest Neighbors (KNN), Logistic Regression, and Neural Network—the **Random Forest** model emerged as the most accurate and reliable, achieving a **92.39% test accuracy** and an **AUC-ROC score of 0.9755**. These results demonstrate the model's strong ability to differentiate between patients with and without heart failure.
+
+The successful identification of heart failure risk using machine learning can significantly aid pharmaceutical companies by enhancing **clinical trial participant selection**, **reducing trial costs**, and **improving treatment effectiveness**. By implementing this model, stakeholders in the healthcare and pharmaceutical industries can make more informed decisions that ultimately lead to better patient outcomes.
+
+This project underscores the potential of machine learning in clinical applications, paving the way for more advanced and precise healthcare solutions.
+
 ![Models Comparison](https://github.com/user-attachments/assets/63bd6b64-03e5-4933-806b-55a9d2cb8c2c)
 ![ROC Curve and Confusion matrix of the best model_Random Forest](https://github.com/user-attachments/assets/fdb6ef9a-0c18-420d-ba81-58b56ee4c56e)
 
@@ -230,8 +260,7 @@ plt.show()
    ```
 
 
-## **Conclusion**
-The Random Forest classifier was identified as the best-performing model, achieving a 92.39% test accuracy and an AUC-ROC of 0.9755. This model provides a reliable tool for predicting heart failure risk, which can benefit pharmaceutical companies in improving clinical trial participant selection and optimizing treatment strategies.
+
 
 
 ## **References**
