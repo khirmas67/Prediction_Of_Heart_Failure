@@ -11,10 +11,10 @@ import joblib
 import os
 
 # Run the script
-'''os.system("python model_KNN.py")
+os.system("python model_KNN.py")
 os.system("python model_neural_network.py")
 os.system("python model_logistic_regression.py")
-os.system("python model_Random_forest.py")'''
+os.system("python model_Random_forest.py")
 
 # Function to load models from .pkl files
 def load_model(filepath):
