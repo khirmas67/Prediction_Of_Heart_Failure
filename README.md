@@ -109,4 +109,9 @@ The Random Forest classifier was identified as the best-performing model, achiev
 Feel free to reach out if you have any questions or feedback:  
 **Khaled Hirmas** : https://github.com/khirmas67
 
+https://drive.google.com/file/d/1zAGJU20T4gPiQutDFkGph8t0_Z0UzCZF/view?usp=drive_link
+
+ [Watch the Project Video: Prediction of Heart Failure](https://drive.google.com/file/d/your_file_id/view?usp=sharing)
+
+
    
