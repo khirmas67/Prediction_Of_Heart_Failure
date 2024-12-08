@@ -2,13 +2,13 @@ Model Evaluation Results
 ==============================
 
 Model: Neural Network
-  Accuracy: 0.9185
-  Precision: 0.9286
-  Recall: 0.9192
-  AUC-ROC: 0.9761
+  Accuracy: 0.9076
+  Precision: 0.9184
+  Recall: 0.9091
+  AUC-ROC: 0.9747
   Confusion Matrix:
-[[78  7]
- [ 8 91]]
+[[77  8]
+ [ 9 90]]
 
 Model: KNN
   Accuracy: 0.9076

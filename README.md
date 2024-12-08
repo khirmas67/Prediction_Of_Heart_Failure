@@ -245,21 +245,21 @@ plt.show()
       AUC Score_train: 0.9697
       Best model saved as 'best_logreg_model.pkl'
 3.K-Nearest Neighbors (KNN) 
-      Mean Cross-Validation Accuracy: 0.8515
+      Mean Cross-Validation Accuracy: 0.8638
       Train Accuracy: 0.8638
-      Test Accuracy: 0.9239
-      Precision: 0.9048
+      Test Accuracy: 0.9076
+      Precision: 0.9362
       Recall: 0.9596
-      AUC Score_test: 0.9755
-      AUC Score_train: 0.9755
+      AUC Score_test: 0.9700
+      AUC Score_train: 0.9700
 4.Neural Network 
-      Mean Cross-Validation Accuracy: 0.8420
-      Train Accuracy: 0.8719
-      Test Accuracy: 0.9185
-      Precision: 0.9375
+      Mean Cross-Validation Accuracy: 0.8434
+      Train Accuracy: 0.8747
+      Test Accuracy: 0.9076
+      Precision: 0.9184
       Recall: 0.9091
-      AUC Score_test: 0.9731
-      AUC Score_train: 0.9427
+      AUC Score_test: 0.9471
+      AUC Score_train: 0.9471
       Best model saved as 'best_nn_model.pkl'
  ```
 ## **Conclusion**
