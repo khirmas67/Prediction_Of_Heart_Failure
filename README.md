@@ -271,10 +271,6 @@ The successful identification of heart failure risk using machine learning can s
 This project underscores the potential of machine learning in clinical applications, paving the way for more advanced and precise healthcare solutions.
 
 ![Models Comparison](https://github.com/user-attachments/assets/63bd6b64-03e5-4933-806b-55a9d2cb8c2c)
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/63bd6b64-03e5-4933-806b-55a9d2cb8c2c" alt="Models Comparison="90%">
-</div>
 ![ROC Curve and Confusion matrix of the best model_Random Forest](https://github.com/user-attachments/assets/fdb6ef9a-0c18-420d-ba81-58b56ee4c56e)
 
 
