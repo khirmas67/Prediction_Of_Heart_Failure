@@ -6,7 +6,7 @@
 1. [Overview](#overview)  
 2. [Dataset](#dataset)  
 3. [Data preprocessing](#data-preprocessing)
-4. [Assessing the Performance of Machine Learning Algorithms for Heart Failure Classification](#Assessing_the_Performance_of_Machine_Learning_Algorithms_for_Heart_Failure_Classification)
+4. [Assessing the Performance of Machine Learning Algorithms](#Assessing_the_Performance_of_Machine_Learning_Algorithms)
 5. [Model Evaluation and Selection](#model-evaluation-and-selection)  
 6. [Conclusion](#conclusion)  
 7. [How to Run the Project](#how-to-run-the-project) 
@@ -88,7 +88,7 @@ The target variable (HeartDisease) indicates whether heart failure was detected,
 -  plots are used to understand data distributions and relationships and identifying trends.
 
 
-### Assessing the Performance of Machine Learning Algorithms for Heart Failure Classification 
+### Assessing the Performance of Machine Learning Algorithms
 
 In this project, the aimed was to identify the most effective machine learning model for solving a classification problem- The prediction of Heart Failure. The selection process involved training and evaluating four popular algorithms: **Random Forest**, **Logistic Regression**, **K-Nearest Neighbors (KNN)**, and a **Neural Network**. These models were chosen because they represent a diverse range of machine learning paradigms, offering different strengths and trade-offs in terms of accuracy, interpretability, and computational complexity.
 
