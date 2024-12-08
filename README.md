@@ -69,7 +69,6 @@ The target variable (HeartDisease) indicates whether heart failure was detected,
 ---
 
 ### Data preprocessing
-
 **The data were processeed as follows:**
 
 **1 - Reading, Preprocessing, and Visualizing Data:**
@@ -95,7 +94,6 @@ The target variable (HeartDisease) indicates whether heart failure was detected,
 ---
 
 ### Assessing the Performance of Machine Learning Algorithms
-
 In this project, the aimed was to identify the most effective machine learning model for solving a classification problem- The prediction of Heart Failure. The selection process involved training and evaluating four popular algorithms: **Random Forest**, **Logistic Regression**, **K-Nearest Neighbors (KNN)**, and a **Neural Network**. These models were chosen because they represent a diverse range of machine learning paradigms, offering different strengths and trade-offs in terms of accuracy, interpretability, and computational complexity.
 
 To ensure a fair comparison, all models were evaluated using consistent preprocessing and performance metrics, including **accuracy**, **precision**, **recall**, and the **AUC-ROC**. These metrics were selected to capture the overall performance, balance between false positives and false negatives, and the suitability of each model for our specific application needs.
@@ -108,11 +106,9 @@ The goal of this evaluation was to:
 ---
 
 ### Model Evaluation and Selection
-
 This script , `src/model_comparison.py`, evaluates multiple machine learning models (Neural Network, KNN, Logistic Regression, and Random Forest) on the heart disease prediction dataset,then selects the best-performing model based on metrics such as accuracy, precision, recall, and AUC score, and visualizes the model's performance through ROC curves, confusion matrices, and other evaluation metrics.
 
 ### The Script
-
 ```python
 import os
 import joblib
@@ -297,8 +293,7 @@ Each model's performance is summarized by four metrics:
 
 ---
 
-## **Conclusion**
-
+### **Conclusion**
 In this project, we developed and evaluated multiple machine learning models to predict heart failure risk using clinical data. Among the four models—Random Forest, K-Nearest Neighbors (KNN), Logistic Regression, and Neural Network—the **Random Forest** model emerged as the most accurate and reliable, achieving a **92.39% test accuracy** and an **AUC-ROC score of 0.9755**. These results demonstrate the model's strong ability to differentiate between patients with and without heart failure.
 
 The successful identification of heart failure risk using machine learning can significantly aid pharmaceutical companies by enhancing **clinical trial participant selection**, **reducing trial costs**, and **improving treatment effectiveness**. By implementing this model, stakeholders in the healthcare and pharmaceutical industries can make more informed decisions that ultimately lead to better patient outcomes.
@@ -312,7 +307,7 @@ This project underscores the potential of machine learning in clinical applicati
 
 ---
 
-## **How to Run the Project**
+### **How to Run the Project**
 1. **Clone the repository:**
    ```bash
    git clone (https://github.com/khirmas67/Prediction_Of_Heart_Failure.git)
@@ -325,7 +320,7 @@ This project underscores the potential of machine learning in clinical applicati
    ```
 ---
 
-## **Project Structure**
+### **Project Structure**
 The project Structure is as follows:
 ```bash
 Prediction_Of_Heart_Failure/
@@ -343,7 +338,7 @@ Prediction_Of_Heart_Failure/
 ```
 --- 
 
-## **References**
+### **References**
 
 1. **Basic writing and formatting syntax** [🔗](https://www.markdownguide.org/basic-syntax/)  
 
@@ -364,7 +359,7 @@ Prediction_Of_Heart_Failure/
    
 ---
 
-## **Contact**
+### **Contact**
 Feel free to reach out if you have any questions or feedback:  
 **Khaled Hirmas** : https://github.com/khirmas67
 
