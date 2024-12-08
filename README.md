@@ -13,18 +13,21 @@
 8. [Project Structure](#project-structure)  
 9. [References](#references)  
 10. [Contact](#contact)
- 
+
+--- 
 
 ## **Overview**
 This project aims to develop machine learning models for predicting heart failure risk using patient clinical data, then choose the one with the best performance metrics. The candidate algorithms to develop these models are:  K-Nearest Neighbors , Random Forest ,  Logistic Regression and  Neural Network.  Such predictions can assist pharmaceutical companies in optimizing clinical trial participant selection and improving treatment effectiveness.
 
- 
+---
+
 ## **Business Case: Pharmaceutical Industry**
 In the pharmaceutical industry, **identifying target patients** is very important for the success of clinical trials and drug treatments. The machine learning model in this project provides several benefits:  
 1. Improves candidate selection for clinical trials.  
 2. Reduces trial time and costs by selecting the right participants.  
 3. Enhances treatment effectiveness.
 
+---
 
 ## **Dataset**
 The dataset used in this project is available on [Kaggle](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction). It contains **918 samples** with **11 clinical features**, including:
@@ -63,6 +66,8 @@ The target variable (HeartDisease) indicates whether heart failure was detected,
   <img src="https://github.com/user-attachments/assets/46490ede-1d9c-4711-82ec-7e6875acda73" alt="Heart Disease Distribution" width="50%">
 </div>
 
+---
+
 ### Data preprocessing
 
 **The data were processeed as follows:**
@@ -77,9 +82,9 @@ The target variable (HeartDisease) indicates whether heart failure was detected,
 **2 - Data Cleaning and Feature Engineering:**
 - Necessary preprocessing steps are applied, such as:
   -  Removing or handling duplicate rows.
-  -  Separated features into numerical and categorical groups. 
-  -  Encoded categorical variables using one-hot encoding. 
-  -  iv. Standardized numerical variables for model training.    
+  -  Separating features into numerical and categorical groups. 
+  -  Encoding categorical variables using one-hot encoding. 
+  -  Standardizing numerical variables for model training.    
 
 **3 - Data Splittting :**
 - The dataset is divided into training and testing subsets to evaluate model performance effectively. A typical 80:20 split is applied.
@@ -87,6 +92,7 @@ The target variable (HeartDisease) indicates whether heart failure was detected,
 **4 - Data Visualization**
 -  plots are used to understand data distributions and relationships and identifying trends.
 
+---
 
 ### Assessing the Performance of Machine Learning Algorithms
 
@@ -99,12 +105,13 @@ The goal of this evaluation was to:
 2. Identify the model best suited for deployment based on specific requirements, such as high recall (sensitivity) or overall balance in performance.
 3. Save the trained models - in pickle files - for future use, ensuring reproducibility and efficient implementation.
 
+---
 
 ### Model Evaluation and Selection
 
 This script , `src/model_comparison.py`, evaluates multiple machine learning models (Neural Network, KNN, Logistic Regression, and Random Forest) on the heart disease prediction dataset,then selects the best-performing model based on metrics such as accuracy, precision, recall, and AUC score, and visualizes the model's performance through ROC curves, confusion matrices, and other evaluation metrics.
 
-### Script
+### The Script
 
 ```python
 import os
@@ -259,7 +266,7 @@ plt.legend()
 plt.savefig(f"{output_dir}/Models Comparison.png")
 plt.show()
 ```
-
+---
 ## **The results:** 
  
 `Evaluation Metrics:`
@@ -287,7 +294,9 @@ Each model's performance is summarized by four metrics:
 - **Logistic Regression**: `models/best_logreg_model.pkl`
 - **K-Nearest Neighbors**: `models/best_knn_model.pkl`
 - **Neural Network**: `models/best_nn_model.pkl`
- 
+
+---
+
 ## **Conclusion**
 
 In this project, we developed and evaluated multiple machine learning models to predict heart failure risk using clinical data. Among the four models—Random Forest, K-Nearest Neighbors (KNN), Logistic Regression, and Neural Network—the **Random Forest** model emerged as the most accurate and reliable, achieving a **92.39% test accuracy** and an **AUC-ROC score of 0.9755**. These results demonstrate the model's strong ability to differentiate between patients with and without heart failure.
@@ -301,8 +310,7 @@ This project underscores the potential of machine learning in clinical applicati
 
 ![ROC Curve and Confusion matrix of the best model_Random Forest](https://github.com/user-attachments/assets/fdb6ef9a-0c18-420d-ba81-58b56ee4c56e)
 
-
-
+---
 
 ## **How to Run the Project**
 1. **Clone the repository:**
@@ -315,6 +323,7 @@ This project underscores the potential of machine learning in clinical applicati
    ```bash
    pip install -r requirements.txt 
    ```
+---
 
 ## **Project Structure**
 The project Structure is as follows:
@@ -332,6 +341,7 @@ Prediction_Of_Heart_Failure/
 └── src/                      # Python scripts for preprocessing, training, and evaluation
 
 ```
+--- 
 
 ## **References**
 
