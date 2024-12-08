@@ -60,8 +60,9 @@ The target variable (HeartDisease) indicates whether heart failure was detected,
 
 ![heart_disease_distribution](https://github.com/user-attachments/assets/46490ede-1d9c-4711-82ec-7e6875acda73)
 
+
 <div align="center">
-  <img src="(https://github.com/user-attachments/assets/46490ede-1d9c-4711-82ec-7e6875acda73)" alt="heart_disease_distribution" width="50%">
+  <img src="https://github.com/user-attachments/assets/46490ede-1d9c-4711-82ec-7e6875acda73" alt="Heart Disease Distribution" width="50%">
 </div>
 
 
