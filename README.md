@@ -6,7 +6,7 @@
 1. [Overview](#overview)  
 2. [Dataset](#dataset)  
 3. [Data preprocessing](#data-preprocessing)
-4. [Assessing the Performance of Machine Learning Algorithms](#Assessing_the_Performance_of_Machine_Learning_Algorithms)
+4. [Assessing the Performance of Machine Learning Algorithms](#assessing-the-performance-of-machine-learning-algorithms)
 5. [Model Evaluation and Selection](#model-evaluation-and-selection)  
 6. [Conclusion](#conclusion)  
 7. [How to Run the Project](#how-to-run-the-project) 
