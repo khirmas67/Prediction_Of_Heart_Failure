@@ -67,7 +67,6 @@ The target variable (HeartDisease) indicates whether heart failure was detected,
 </div>
 
 ---
-
 ### Data preprocessing
 **The data were processeed as follows:**
 
@@ -92,7 +91,6 @@ The target variable (HeartDisease) indicates whether heart failure was detected,
 -  plots are used to understand data distributions and relationships and identifying trends.
 
 ---
-
 ### Assessing the Performance of Machine Learning Algorithms
 In this project, the aimed was to identify the most effective machine learning model for solving a classification problem- The prediction of Heart Failure. The selection process involved training and evaluating four popular algorithms: **Random Forest**, **Logistic Regression**, **K-Nearest Neighbors (KNN)**, and a **Neural Network**. These models were chosen because they represent a diverse range of machine learning paradigms, offering different strengths and trade-offs in terms of accuracy, interpretability, and computational complexity.
 
@@ -104,7 +102,6 @@ The goal of this evaluation was to:
 3. Save the trained models - in pickle files - for future use, ensuring reproducibility and efficient implementation.
 
 ---
-
 ### Model Evaluation and Selection
 This script , `src/model_comparison.py`, evaluates multiple machine learning models (Neural Network, KNN, Logistic Regression, and Random Forest) on the heart disease prediction dataset,then selects the best-performing model based on metrics such as accuracy, precision, recall, and AUC score, and visualizes the model's performance through ROC curves, confusion matrices, and other evaluation metrics.
 
@@ -264,7 +261,6 @@ plt.show()
 ```
 ---
 ## **The results:** 
- 
 `Evaluation Metrics:`
 Each model's performance is summarized by four metrics: 
 - **Accuracy**
