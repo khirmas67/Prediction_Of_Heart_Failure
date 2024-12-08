@@ -68,7 +68,7 @@ This notebook requires the following Python libraries:
 
 
 
-5. **Figures**     
+5. **Examples of the Figures**     
 
 - **Heart disease distribution**
 
