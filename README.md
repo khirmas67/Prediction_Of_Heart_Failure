@@ -2,11 +2,11 @@
 
 ## **Table of Contents**  
 1. [Overview](#overview)  
-2. [Project Structure](#project-structure)  
 3. [Dataset](#dataset)  
 4. [Model Evaluation and Selection](#model-evaluation-and-selection)  
 5. [Conclusion](#conclusion)  
 6. [How to Run the Project](#how-to-run-the-project) 
+2. [Project Structure](#project-structure)  
 7. [References](#references)  
 8. [Contact](#contact)
  
@@ -21,22 +21,7 @@ In the pharmaceutical industry, **identifying target patients** is very importan
 2. Reduces trial time and costs by selecting the right participants.  
 3. Enhances treatment effectiveness.
 
-## **Project Structure**
-The project Structure is as follows:
-```bash
-Prediction_Of_Heart_Failure/
-├── data/
-│   ├── processed/            # Folder for processed data
-│   ├── raw/                  # Folder for raw data
-│   └── SQL/                  # Folder for tables
-├── experiments/              # Jupyter notebooks for experiments and EDA
-├── models/                   # Trained models 
-├── reports/                  # Visualizations, evaluation reports from EDA and model performance
-├── README.md                 # Project overview and instructions (this file)
-├── requirements.txt          # List of dependencies
-└── src/                      # Python scripts for preprocessing, training, and evaluation
 
-```
 ## **Dataset**
 The dataset used in this project is available on [Kaggle](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction). It contains **918 samples** with **11 clinical features**, including:
 - Age  
@@ -50,6 +35,12 @@ The dataset used in this project is available on [Kaggle](https://www.kaggle.com
 - Exercise Angina
 - ST depression(OldPeak)
 - Slope of the ST segment  
+
+![The Dataset](https://github.com/user-attachments/assets/243b0c6f-2009-4561-a69c-f7846f4e6d66)
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/243b0c6f-2009-4561-a69c-f7846f4e6d66" alt="The Dataset" width="90%">
+</div>
 
 The distribution of Numerical Features in Relation to Heart Disease is shown in the figure below:
 <div align="center">
@@ -298,9 +289,22 @@ This project underscores the potential of machine learning in clinical applicati
    pip install -r requirements.txt 
    ```
 
+## **Project Structure**
+The project Structure is as follows:
+```bash
+Prediction_Of_Heart_Failure/
+├── data/
+│   ├── processed/            # Folder for processed data
+│   ├── raw/                  # Folder for raw data
+│   └── SQL/                  # Folder for tables
+├── experiments/              # Jupyter notebooks for experiments and EDA
+├── models/                   # Trained models 
+├── reports/                  # Visualizations, evaluation reports from EDA and model performance
+├── README.md                 # Project overview and instructions (this file)
+├── requirements.txt          # List of dependencies
+└── src/                      # Python scripts for preprocessing, training, and evaluation
 
-
-
+```
 
 ## **References**
 1. Basic writing and formatting syntax [🔗](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) 
