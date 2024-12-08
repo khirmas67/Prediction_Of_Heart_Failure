@@ -262,7 +262,7 @@ plt.show()
 
 ## **The results:** 
  ```
-### Evaluation Metrics:
+`Evaluation Metrics:`
 Each model's performance is summarized by four metrics: 
 - **Accuracy**
 - **Precision**
@@ -276,13 +276,13 @@ Each model's performance is summarized by four metrics:
 | **K-Nearest Neighbors**  | 0.9076       | 0.9362        | 0.8889     | 0.9700        |
 | **Neural Network**       | 0.9185       | 0.9375        | 0.9091     | 0.9471        |
 
-### Key Observations:
+`Key Observations:`
 1. **Random Forest**: Achieves the highest accuracy (0.9239 )and recall (0.9596) AUC score (0.9755), making it an excellent choice for applications prioritizing sensitivity and overall performance.
 2. **Logistic Regression**: Offers the highest precision (0.9271) and balances metrics well, but recall (0.8990) is lower than Random Forest.
 3. **KNN**: Precision is highest (0.9362), but recall (0.8889) lags, making it less balanced.
 4. **Neural Network**: Performs competitively across all metrics, with the highest precision (0.9375) among models but slightly lower AUC score (0.9471) than Random Forest.
 
-### Saved Models:
+`Saved Models`
 - **Random Forest**: `models/best_rf_model.pkl` 
 - **Logistic Regression**: `models/best_logreg_model.pkl`
 - **K-Nearest Neighbors**: `models/best_knn_model.pkl`
