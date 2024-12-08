@@ -276,6 +276,13 @@ This project underscores the potential of machine learning in clinical applicati
 ![ROC Curve and Confusion matrix of the best model_Random Forest](https://github.com/user-attachments/assets/fdb6ef9a-0c18-420d-ba81-58b56ee4c56e)
 
 
+
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/63bd6b64-03e5-4933-806b-55a9d2cb8c2c" alt="Models Comparison="70%">
+</div>
+
+
 ## **How to Run the Project**
 1. **Clone the repository:**
    ```bash
