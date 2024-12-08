@@ -38,9 +38,6 @@ The dataset used in this project is available on [Kaggle](https://www.kaggle.com
 
 ![The Dataset](https://github.com/user-attachments/assets/243b0c6f-2009-4561-a69c-f7846f4e6d66)
 
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/243b0c6f-2009-4561-a69c-f7846f4e6d66" alt="The Dataset" width="90%">
-</div>
 
 The distribution of Numerical Features in Relation to Heart Disease is shown in the figure below:
 <div align="center">
