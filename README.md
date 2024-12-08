@@ -309,22 +309,22 @@ Prediction_Of_Heart_Failure/
 
 ## **References**
 
-1. **Basic writing and formatting syntax** 🔗  
-   (Markdown Guide)
+1. **Basic writing and formatting syntax** [🔗](https://www.markdownguide.org/basic-syntax/)  
 
 2. **G. James et al.,** *An Introduction to Statistical Learning with Applications in Python* (Springer: 2023)  
-
-3. **Heart Failure Prediction Dataset on Kaggle** 🔗  
-
-4. **Choosing color palettes** 🔗  
    
-6. **Scikit-learn Documentation** 🔗  
-   
-7. **TensorFlow Documentation** 🔗  
+3. **Heart Failure Prediction Dataset on Kaggle** [🔗](https://www.kaggle.com/datasets)  
+  
+4. **Choosing color palettes** [🔗](https://www.colorhexa.com/)  
 
-8. **Kaggle - Machine Learning Tutorials** 🔗  
+5. **Scikit-learn Documentation** [🔗](https://scikit-learn.org/)  
    
-9. **Python Plotly Documentation** 🔗  
+6. **TensorFlow Documentation** [🔗](https://www.tensorflow.org/)  
+   
+7. **Kaggle - Machine Learning Tutorials** [🔗](https://www.kaggle.com/learn)  
+   A collection of tutorials and datasets from Kaggle to help learn and apply machine learning algorithms to real-world problems.
+
+8. **Python Plotly Documentation** [🔗](https://plotly.com/python/)  
    
 ---
 
