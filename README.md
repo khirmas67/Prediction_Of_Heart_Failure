@@ -263,24 +263,19 @@ plt.show()
       Best model saved as 'best_nn_model.pkl'
  ```
 ## **Conclusion**
-
+```
 In this project, we developed and evaluated multiple machine learning models to predict heart failure risk using clinical data. Among the four models—Random Forest, K-Nearest Neighbors (KNN), Logistic Regression, and Neural Network—the **Random Forest** model emerged as the most accurate and reliable, achieving a **92.39% test accuracy** and an **AUC-ROC score of 0.9755**. These results demonstrate the model's strong ability to differentiate between patients with and without heart failure.
 
 The successful identification of heart failure risk using machine learning can significantly aid pharmaceutical companies by enhancing **clinical trial participant selection**, **reducing trial costs**, and **improving treatment effectiveness**. By implementing this model, stakeholders in the healthcare and pharmaceutical industries can make more informed decisions that ultimately lead to better patient outcomes.
 
 This project underscores the potential of machine learning in clinical applications, paving the way for more advanced and precise healthcare solutions.
-
+```
 ![Models Comparison](https://github.com/user-attachments/assets/63bd6b64-03e5-4933-806b-55a9d2cb8c2c)
 
 
 ![ROC Curve and Confusion matrix of the best model_Random Forest](https://github.com/user-attachments/assets/fdb6ef9a-0c18-420d-ba81-58b56ee4c56e)
 
 
-
-
-<div align="center">
-  <img src="https://github.com/user-attachments/assets/63bd6b64-03e5-4933-806b-55a9d2cb8c2c" alt="Models Comparison="70%">
-</div>
 
 
 ## **How to Run the Project**
