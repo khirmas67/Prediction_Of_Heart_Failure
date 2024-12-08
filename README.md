@@ -55,7 +55,7 @@ The distribution of Numerical Features in Relation to Heart Disease is shown in 
 ![heart_disease_numeric_features_analysis](https://github.com/user-attachments/assets/caf41bff-79a2-4421-8c5b-e34229c38462)
 
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/caf41bff-79a2-4421-8c5b-e34229c38462" alt="Analysis of Numeric Features Related to Heart Disease" width="50%">
+  <img src="https://github.com/user-attachments/assets/caf41bff-79a2-4421-8c5b-e34229c38462" alt="Analysis of Numeric Features Related to Heart Disease" width="10%">
 </div>
 
 The distribution of Categorical Features vs Heart Disease Status is shown in the figure below:![heart_disease__categorical_features_analysis](https://github.com/user-attachments/assets/7796aa0f-40e2-43d8-88b8-8f6923c9b265)
