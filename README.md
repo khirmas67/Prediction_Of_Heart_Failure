@@ -290,6 +290,12 @@ Each model's performance is summarized by four metrics:
 - **K-Nearest Neighbors**: `models/best_knn_model.pkl`
 - **Neural Network**: `models/best_nn_model.pkl`
 
+![Models Comparison](https://github.com/user-attachments/assets/63bd6b64-03e5-4933-806b-55a9d2cb8c2c)
+
+
+![ROC Curve and Confusion matrix of the best model_Random Forest](https://github.com/user-attachments/assets/fdb6ef9a-0c18-420d-ba81-58b56ee4c56e)
+
+
 ---
 
 ### **Conclusion**
@@ -298,11 +304,6 @@ In this project, we developed and evaluated multiple machine learning models to 
 The successful identification of heart failure risk using machine learning can significantly aid pharmaceutical companies by enhancing **clinical trial participant selection**, **reducing trial costs**, and **improving treatment effectiveness**. By implementing this model, stakeholders in the healthcare and pharmaceutical industries can make more informed decisions that ultimately lead to better patient outcomes.
 
 This project underscores the potential of machine learning in clinical applications, paving the way for more advanced and precise healthcare solutions.
-
-![Models Comparison](https://github.com/user-attachments/assets/63bd6b64-03e5-4933-806b-55a9d2cb8c2c)
-
-
-![ROC Curve and Confusion matrix of the best model_Random Forest](https://github.com/user-attachments/assets/fdb6ef9a-0c18-420d-ba81-58b56ee4c56e)
 
 ---
 
