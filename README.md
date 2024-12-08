@@ -308,15 +308,25 @@ Prediction_Of_Heart_Failure/
 ```
 
 ## **References**
-1. Basic writing and formatting syntax [🔗](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) 
 
-2. G. James et al., An Introduction to Statistical Learning with applications in Python(pringer: 2023)
+1. **Basic writing and formatting syntax** 🔗  
+   (Markdown Guide)
 
-3. Heart Failure Prediction Dataset on Kaggle [🔗](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction)
+2. **G. James et al.,** *An Introduction to Statistical Learning with Applications in Python* (Springer: 2023)  
 
-4. Choosing color palettes [🔗](https://seaborn.pydata.org/tutorial/color_palettes.html)
+3. **Heart Failure Prediction Dataset on Kaggle** 🔗  
 
-5. Helper Function for Plotting [🔗](https://matplotlib.org/stable/gallery/color/named_colors.html#)
+4. **Choosing color palettes** 🔗  
+   
+6. **Scikit-learn Documentation** 🔗  
+   
+7. **TensorFlow Documentation** 🔗  
+
+8. **Kaggle - Machine Learning Tutorials** 🔗  
+   
+9. **Python Plotly Documentation** 🔗  
+   
+---
 
 ## **Contact**
 Feel free to reach out if you have any questions or feedback:  
