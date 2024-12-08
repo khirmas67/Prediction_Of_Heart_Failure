@@ -4,13 +4,15 @@
 
 ## **Table of Contents**  
 1. [Overview](#overview)  
-3. [Dataset](#dataset)  
-4. [Model Evaluation and Selection](#model-evaluation-and-selection)  
-5. [Conclusion](#conclusion)  
-6. [How to Run the Project](#how-to-run-the-project) 
-2. [Project Structure](#project-structure)  
-7. [References](#references)  
-8. [Contact](#contact)
+2. [Dataset](#dataset)  
+3. [Data preprocessing](#data-preprocessing)
+4. [Assessing the Performance of Machine Learning Algorithms for Heart Failure Classification](#Assessing_the_Performance_of_Machine_Learning_Algorithms_for_Heart_Failure_Classification)
+5. [Model Evaluation and Selection](#model-evaluation-and-selection)  
+6. [Conclusion](#conclusion)  
+7. [How to Run the Project](#how-to-run-the-project) 
+8. [Project Structure](#project-structure)  
+9. [References](#references)  
+10. [Contact](#contact)
  
 
 ## **Overview**
@@ -61,14 +63,46 @@ The target variable (HeartDisease) indicates whether heart failure was detected,
   <img src="https://github.com/user-attachments/assets/46490ede-1d9c-4711-82ec-7e6875acda73" alt="Heart Disease Distribution" width="50%">
 </div>
 
+### Data preprocessing
 
-## Running the Model Evaluation
+**The data were processeed as follows:**
 
-You can run the following script to load models, evaluate them, and visualize their performance. This script evaluates four machine learning models (Neural Network, KNN, Logistic Regression, Random Forest) and compares their accuracy, precision, recall, and AUC score.
+**1 - Reading, Preprocessing, and Visualizing Data:**
+- the Dataset :The raw dataset is loaded into a pandas DataFrame for further processing.
+- Checking for Duplicates:  Duplicate entries are identified and handled accordingly.
+- Displaying Dataset Information:Metadata such as data types, non-null counts, and summary statistics are explored
+- Statistical Summary: A statistical overview of the dataset is calculated (e.g., mean, median, standard deviation).
+- Conducted statistical tests (e.g., Chi-Square and T-tests) to identify feature significance.
+
+**2 - Data Cleaning and Feature Engineering:**
+- Necessary preprocessing steps are applied, such as:
+    i.   Removing or handling duplicate rows.
+    ii.  Separated features into numerical and categorical groups. 
+    i.  Encoded categorical variables using one-hot encoding. 
+    iv. Standardized numerical variables for model training.    
+
+**3 - Data Splittting :**
+- The dataset is divided into training and testing subsets to evaluate model performance effectively. A typical 80:20 split is applied.
+
+**4 - Data Visualization**
+-  plots are used to understand data distributions and relationships and identifying trends.
+
+
+### Assessing the Performance of Machine Learning Algorithms for Heart Failure Classification 
+
+In this project, the aimed was to identify the most effective machine learning model for solving a classification problem- The prediction of Heart Failure. The selection process involved training and evaluating four popular algorithms: **Random Forest**, **Logistic Regression**, **K-Nearest Neighbors (KNN)**, and a **Neural Network**. These models were chosen because they represent a diverse range of machine learning paradigms, offering different strengths and trade-offs in terms of accuracy, interpretability, and computational complexity.
+
+To ensure a fair comparison, all models were evaluated using consistent preprocessing and performance metrics, including **accuracy**, **precision**, **recall**, and the **AUC-ROC**. These metrics were selected to capture the overall performance, balance between false positives and false negatives, and the suitability of each model for our specific application needs.
+
+The goal of this evaluation was to:
+1. Compare the models’ performances across key metrics.
+2. Identify the model best suited for deployment based on specific requirements, such as high recall (sensitivity) or overall balance in performance.
+3. Save the trained models - in pickle files - for future use, ensuring reproducibility and efficient implementation.
+
 
 ### Model Evaluation and Selection
 
-This script , `src/model_comparison.py`, evaluates multiple machine learning models (Neural Network, KNN, Logistic Regression, and Random Forest) on the heart disease prediction dataset. It selects the best-performing model based on metrics such as accuracy, precision, recall, and AUC score, and visualizes the model's performance through ROC curves, confusion matrices, and other evaluation metrics.
+This script , `src/model_comparison.py`, evaluates multiple machine learning models (Neural Network, KNN, Logistic Regression, and Random Forest) on the heart disease prediction dataset,then selects the best-performing model based on metrics such as accuracy, precision, recall, and AUC score, and visualizes the model's performance through ROC curves, confusion matrices, and other evaluation metrics.
 
 ### Script
 
@@ -228,41 +262,31 @@ plt.show()
 
 ## **The results:** 
  ```
-1.Random Forest 
-      Mean Cross-Validation Accuracy: 0.8515
-      Train Accuracy: 0.8638
-      Test Accuracy: 0.9239        
-      Precision: 0.9048
-      Recall: 0.9596
-      AUC Score_test: 0.9755
-      AUC Score_train: 0.9755
-      Best model saved as 'best_rf_model.pkl'
-2.Logistic Regression 
-      Mean Cross-Validation Accuracy: 0.8570
-      Train Accuracy: 0.8638
-      Test Accuracy: 0.9076
-      Precision: 0.9271
-      Recall: 0.8990
-      AUC Score_test: 0.9697
-      AUC Score_train: 0.9697
-      Best model saved as 'best_logreg_model.pkl'
-3.K-Nearest Neighbors (KNN) 
-      Mean Cross-Validation Accuracy: 0.8638
-      Train Accuracy: 0.8638
-      Test Accuracy: 0.9076
-      Precision: 0.9362
-      Recall: 0.9596
-      AUC Score_test: 0.9700
-      AUC Score_train: 0.9700
-4.Neural Network 
-      Mean Cross-Validation Accuracy: 0.8434
-      Train Accuracy: 0.8747
-      Test Accuracy: 0.9076
-      Precision: 0.9184
-      Recall: 0.9091
-      AUC Score_test: 0.9471
-      AUC Score_train: 0.9471
-      Best model saved as 'best_nn_model.pkl'
+### Evaluation Metrics:
+Each model's performance is summarized by four metrics: 
+- **Accuracy**
+- **Precision**
+- **Recall**
+- **AUC score**
+
+| **Model**                | **Accuracy** | **Precision** | **Recall** | **AUC score** |
+|--------------------------|--------------|---------------|------------|---------------|
+| **Random Forest**        | 0.9239       | 0.9048        | 0.9596     | 0.9755        |
+| **Logistic Regression**  | 0.9076       | 0.9271        | 0.8990     | 0.9697        |
+| **K-Nearest Neighbors**  | 0.9076       | 0.9362        | 0.8889     | 0.9700        |
+| **Neural Network**       | 0.9185       | 0.9375        | 0.9091     | 0.9471        |
+
+### Key Observations:
+1. **Random Forest**: Achieves the highest accuracy (0.9239 )and recall (0.9596) AUC score (0.9755), making it an excellent choice for applications prioritizing sensitivity and overall performance.
+2. **Logistic Regression**: Offers the highest precision (0.9271) and balances metrics well, but recall (0.8990) is lower than Random Forest.
+3. **KNN**: Precision is highest (0.9362), but recall (0.8889) lags, making it less balanced.
+4. **Neural Network**: Performs competitively across all metrics, with the highest precision (0.9375) among models but slightly lower AUC score (0.9471) than Random Forest.
+
+### Saved Models:
+- **Random Forest**: `models/best_rf_model.pkl` 
+- **Logistic Regression**: `models/best_logreg_model.pkl`
+- **K-Nearest Neighbors**: `models/best_knn_model.pkl`
+- **Neural Network**: `models/best_nn_model.pkl`
  ```
 ## **Conclusion**
 
