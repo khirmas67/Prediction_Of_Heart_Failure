@@ -269,7 +269,7 @@ In this project, we developed and evaluated multiple machine learning models to 
 The successful identification of heart failure risk using machine learning can significantly aid pharmaceutical companies by enhancing **clinical trial participant selection**, **reducing trial costs**, and **improving treatment effectiveness**. By implementing this model, stakeholders in the healthcare and pharmaceutical industries can make more informed decisions that ultimately lead to better patient outcomes.
 
 This project underscores the potential of machine learning in clinical applications, paving the way for more advanced and precise healthcare solutions.
-```
+
 ![Models Comparison](https://github.com/user-attachments/assets/63bd6b64-03e5-4933-806b-55a9d2cb8c2c)
 
 
