@@ -52,14 +52,16 @@ The dataset used in this project is available on [Kaggle](https://www.kaggle.com
 - Slope of the ST segment  
 
 The distribution of Numerical Features in Relation to Heart Disease is shown in the figure below:
-![heart_disease_numeric_features_analysis](https://github.com/user-attachments/assets/caf41bff-79a2-4421-8c5b-e34229c38462)
-
 <div align="center">
   <img src="https://github.com/user-attachments/assets/caf41bff-79a2-4421-8c5b-e34229c38462" alt="Analysis of Numeric Features Related to Heart Disease" width="90%">
 </div>
 
-The distribution of Categorical Features vs Heart Disease Status is shown in the figure below:![heart_disease__categorical_features_analysis](https://github.com/user-attachments/assets/7796aa0f-40e2-43d8-88b8-8f6923c9b265)
 
+The distribution of Categorical Features vs Heart Disease Status is shown in the figure below:
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/7796aa0f-40e2-43d8-88b8-8f6923c9b265" alt="Analysis of Categorical Features Related to Heart Disease" width="50%">
+</div>
 The target variable (HeartDisease) indicates whether heart failure was detected, with binary values: No = 0 and Yes = 1. The pie chart below visualizes the distribution of heart disease cases in the dataset. Approximately 55.3% of the cases have heart disease, while 44.7% do not. This distribution highlights the imbalance in the dataset.
 
 
