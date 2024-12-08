@@ -51,14 +51,17 @@ The dataset used in this project is available on [Kaggle](https://www.kaggle.com
 - ST depression(OldPeak)
 - Slope of the ST segment  
 
-The istribution of Numerical Features in Relation to Heart Disease is shown in the figure below:
+The distribution of Numerical Features in Relation to Heart Disease is shown in the figure below:
 ![heart_disease_numeric_features_analysis](https://github.com/user-attachments/assets/caf41bff-79a2-4421-8c5b-e34229c38462)
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/caf41bff-79a2-4421-8c5b-e34229c38462" alt="Analysis of Numeric Features Related to Heart Disease" width="50%">
+</div>
 
 The distribution of Categorical Features vs Heart Disease Status is shown in the figure below:![heart_disease__categorical_features_analysis](https://github.com/user-attachments/assets/7796aa0f-40e2-43d8-88b8-8f6923c9b265)
 
 The target variable (HeartDisease) indicates whether heart failure was detected, with binary values: No = 0 and Yes = 1. The pie chart below visualizes the distribution of heart disease cases in the dataset. Approximately 55.3% of the cases have heart disease, while 44.7% do not. This distribution highlights the imbalance in the dataset.
 
-![heart_disease_distribution](https://github.com/user-attachments/assets/46490ede-1d9c-4711-82ec-7e6875acda73)
 
 
 <div align="center">
