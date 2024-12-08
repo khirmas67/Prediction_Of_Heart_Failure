@@ -76,10 +76,10 @@ The target variable (HeartDisease) indicates whether heart failure was detected,
 
 **2 - Data Cleaning and Feature Engineering:**
 - Necessary preprocessing steps are applied, such as:
-    i.   Removing or handling duplicate rows.
-    ii.  Separated features into numerical and categorical groups. 
-    i.  Encoded categorical variables using one-hot encoding. 
-    iv. Standardized numerical variables for model training.    
+  -  Removing or handling duplicate rows.
+  -  Separated features into numerical and categorical groups. 
+  -  Encoded categorical variables using one-hot encoding. 
+  -  iv. Standardized numerical variables for model training.    
 
 **3 - Data Splittting :**
 - The dataset is divided into training and testing subsets to evaluate model performance effectively. A typical 80:20 split is applied.
@@ -261,7 +261,7 @@ plt.show()
 ```
 
 ## **The results:** 
- ```
+ 
 `Evaluation Metrics:`
 Each model's performance is summarized by four metrics: 
 - **Accuracy**
@@ -287,7 +287,7 @@ Each model's performance is summarized by four metrics:
 - **Logistic Regression**: `models/best_logreg_model.pkl`
 - **K-Nearest Neighbors**: `models/best_knn_model.pkl`
 - **Neural Network**: `models/best_nn_model.pkl`
- ```
+ 
 ## **Conclusion**
 
 In this project, we developed and evaluated multiple machine learning models to predict heart failure risk using clinical data. Among the four models—Random Forest, K-Nearest Neighbors (KNN), Logistic Regression, and Neural Network—the **Random Forest** model emerged as the most accurate and reliable, achieving a **92.39% test accuracy** and an **AUC-ROC score of 0.9755**. These results demonstrate the model's strong ability to differentiate between patients with and without heart failure.
