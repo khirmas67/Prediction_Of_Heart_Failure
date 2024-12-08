@@ -60,6 +60,9 @@ The target variable (HeartDisease) indicates whether heart failure was detected,
 
 ![heart_disease_distribution](https://github.com/user-attachments/assets/46490ede-1d9c-4711-82ec-7e6875acda73)
 
+<div align="center">
+  <img src="(https://github.com/user-attachments/assets/46490ede-1d9c-4711-82ec-7e6875acda73)" alt="heart_disease_distribution" width="50%">
+</div>
 
 
 ## Running the Model Evaluation
@@ -87,7 +90,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, precision_score, \
     recall_score, roc_auc_score, roc_curve, confusion_matrix
 
-# Run the script of the models
+# Run the script of the models (in src folder)
 os.system("python model_KNN.py")
 os.system("python model_neural_network.py")
 os.system("python model_logistic_regression.py")
@@ -111,7 +114,7 @@ models = {
     "Random Forest": joblib.load("../models/best_rf_model.pkl")
 }
 
-# Load the test dataset
+# Load the data
 heart_data = pd.read_csv("../data/processed/heart_cleaned_data.csv")
 numerical_features = ['Age', 'RestingBP', 'Cholesterol', 'FastingBS', 'MaxHR', 'Oldpeak']
 categorical_features = ['Sex', 'ChestPainType', 'RestingECG', 'ExerciseAngina', 'ST_Slope']
@@ -121,7 +124,7 @@ X = heart_data[numerical_features + categorical_features]
 y = heart_data[target_variable]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=67)
 
-# Evaluate each model
+# Evaluate all the models
 model_metrics = {}
 for model_name, model in models.items():
     # Predict and evaluate metrics
@@ -145,13 +148,42 @@ for model_name, model in models.items():
 best_model_name = max(model_metrics, key=lambda name: model_metrics[name]['accuracy'])
 best_model = models[best_model_name]
 best_metrics = model_metrics[best_model_name]
-
 print(f"Best Model: {best_model_name}")
 print(f"Metrics: {best_metrics}")
 
-output_dir="../reports"
+output_dir="../reports/final_visualizations"
+output_dir_1="../reports"
 
-# Plot AUC for the best model
+# Save the evaluation results to a text file
+results_file = os.path.join(output_dir_1, "results.txt")
+
+with open(results_file, "w") as file:
+    file.write("Model Evaluation Results\n")
+    file.write("="*30 + "\n\n")
+    
+    for model_name, metrics in model_metrics.items():
+        file.write(f"Model: {model_name}\n")
+        file.write(f"  Accuracy: {metrics['accuracy']:.4f}\n")
+        file.write(f"  Precision: {metrics['precision']:.4f}\n")
+        file.write(f"  Recall: {metrics['recall']:.4f}\n")
+        if metrics['auc_score'] is not None:
+            file.write(f"  AUC-ROC: {metrics['auc_score']:.4f}\n")
+        file.write(f"  Confusion Matrix:\n{metrics['confusion_matrix']}\n\n")
+    
+    file.write("Best Model\n")
+    file.write("="*30 + "\n")
+    file.write(f"Model: {best_model_name}\n")
+    file.write(f"Metrics:\n")
+    file.write(f"  Accuracy: {best_metrics['accuracy']:.4f}\n")
+    file.write(f"  Precision: {best_metrics['precision']:.4f}\n")
+    file.write(f"  Recall: {best_metrics['recall']:.4f}\n")
+    if best_metrics['auc_score'] is not None:
+        file.write(f"  AUC-ROC: {best_metrics['auc_score']:.4f}\n")
+    file.write(f"  Confusion Matrix:\n{best_metrics['confusion_matrix']}\n")    
+print(f"Results saved to {results_file}")
+
+
+# Plot AUC_ROC for the best model
 if best_metrics['auc_score'] is not None:
     y_pred_prob = best_model.predict_proba(X_test)[:, 1]
     fpr, tpr, _ = roc_curve(y_test, y_pred_prob)

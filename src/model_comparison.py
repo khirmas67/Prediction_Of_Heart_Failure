@@ -77,6 +77,39 @@ print(f"Best Model: {best_model_name}")
 print(f"Metrics: {best_metrics}")
 
 output_dir="../reports/final_visualizations"
+output_dir_1="../reports"
+
+# Save the evaluation results to a text file
+results_file = os.path.join(output_dir_1, "results.txt")
+
+with open(results_file, "w") as file:
+    file.write("Model Evaluation Results\n")
+    file.write("="*30 + "\n\n")
+    
+    for model_name, metrics in model_metrics.items():
+        file.write(f"Model: {model_name}\n")
+        file.write(f"  Accuracy: {metrics['accuracy']:.4f}\n")
+        file.write(f"  Precision: {metrics['precision']:.4f}\n")
+        file.write(f"  Recall: {metrics['recall']:.4f}\n")
+        if metrics['auc_score'] is not None:
+            file.write(f"  AUC-ROC: {metrics['auc_score']:.4f}\n")
+        file.write(f"  Confusion Matrix:\n{metrics['confusion_matrix']}\n\n")
+    
+    file.write("Best Model\n")
+    file.write("="*30 + "\n")
+    file.write(f"Model: {best_model_name}\n")
+    file.write(f"Metrics:\n")
+    file.write(f"  Accuracy: {best_metrics['accuracy']:.4f}\n")
+    file.write(f"  Precision: {best_metrics['precision']:.4f}\n")
+    file.write(f"  Recall: {best_metrics['recall']:.4f}\n")
+    if best_metrics['auc_score'] is not None:
+        file.write(f"  AUC-ROC: {best_metrics['auc_score']:.4f}\n")
+    file.write(f"  Confusion Matrix:\n{best_metrics['confusion_matrix']}\n")
+    
+print(f"Results saved to {results_file}")
+
+
+
 
 # Plot AUC for the best model
 if best_metrics['auc_score'] is not None:

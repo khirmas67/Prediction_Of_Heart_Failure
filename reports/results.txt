@@ -1,0 +1,50 @@
+Model Evaluation Results
+==============================
+
+Model: Neural Network
+  Accuracy: 0.9185
+  Precision: 0.9286
+  Recall: 0.9192
+  AUC-ROC: 0.9761
+  Confusion Matrix:
+[[78  7]
+ [ 8 91]]
+
+Model: KNN
+  Accuracy: 0.9076
+  Precision: 0.9362
+  Recall: 0.8889
+  AUC-ROC: 0.9700
+  Confusion Matrix:
+[[79  6]
+ [11 88]]
+
+Model: Logistic Regression
+  Accuracy: 0.9076
+  Precision: 0.9271
+  Recall: 0.8990
+  AUC-ROC: 0.9697
+  Confusion Matrix:
+[[78  7]
+ [10 89]]
+
+Model: Random Forest
+  Accuracy: 0.9239
+  Precision: 0.9048
+  Recall: 0.9596
+  AUC-ROC: 0.9755
+  Confusion Matrix:
+[[75 10]
+ [ 4 95]]
+
+Best Model
+==============================
+Model: Random Forest
+Metrics:
+  Accuracy: 0.9239
+  Precision: 0.9048
+  Recall: 0.9596
+  AUC-ROC: 0.9755
+  Confusion Matrix:
+[[75 10]
+ [ 4 95]]
