@@ -1,23 +1,22 @@
 ## **This folder contains the following :**
 # **Data Processing Helper Functions**
 
-This repository contains reusable helper functions to streamline various data preprocessing and visualization tasks. These functions help improve efficiency, reduce code duplication, and maintain consistency across data projects.
+This folder contains reusable helper functions to streamline various data preprocessing and visualization tasks. These functions help improve efficiency, reduce code duplication, and maintain consistency across data projects.
 
 ---
 
 ## **Table of Contents**
 
 1. [Installation](#installation)
-2. [Helper Functions](#helper-functions)
+2. [Models codes](#Models-codes) 
+3. [Helper Functions](#helper-functions)
    - [Preprocess Data](#1-preprocess-data)
    - [Save DataFrame to SQL Database](#2-save-dataframe-to-sql-database)
    - [Save DataFrame to CSV](#3-save-dataframe-to-csv)
    - [Histogram Plot for Numerical Features](#4-histogram-plot-for-numerical-features)
    - [Count Plot for Categorical Features](#5-count-plot-for-categorical-features)
    - [Stacked Histogram Plot for Numerical Features](#6-stacked-histogram-plot-for-numerical-features)
-3. [Models codes](#Models-codes) 
-4. [Folder Structure](#folder-structure)
-5. [Contributing](#contributing)
+4. [Contributing](#contributing)
 
 ---
 
@@ -30,7 +29,18 @@ pip install -r requirements.txt
 ```
 
 ---
+```
+## **Models codes**
+ 
+1. model_KNN.py
+2. model_logistic_regression.py
+3. model_neural_network.py
+4. model_Random_forest.py
+5. model_comparison.py
 
+The first four scripts are used to train and evaluate specific machine learning models (KNN, Random Forest, Logistic Regression, and Neural Network), respectively. The fifth code compares the performance of these models and selects the best one based on defined evaluation metrics.
+```
+---
 ## **Helper Functions**
 
 ### **1. Preprocess Data**
@@ -138,37 +148,6 @@ def plot_stacked_histograms(df, numeric_features, hue, output_path):
   - `numeric_features`: List of numerical feature names.
   - `hue`: Target feature for hue.
   - `output_path`: Path to save the plot.
-
----
-## **Models codes**
- 
-1. model_KNN.py
-2. model_logistic_regression.py
-3. model_neural_network.py
-4. model_Random_forest.py
-5. model_comparison.py
-
-he first four codes are used to train and evaluate specific machine learning models (KNN, Random Forest, Logistic Regression, and Neural Network), respectively. The fifth code compares the performance of these models and selects the best one based on defined evaluation metrics.
-
-## **Folder Structure**
-
-The project follows this directory structure:
-
-```
-├── data/
-│   ├── processed/            # Processed datasets
-│   ├── raw/                  # Raw datasets
-│   └── SQL/                  # SQLite databases
-├── src/                      # Source code for helper functions
-│   ├── data_preprocessing.py # Preprocessing functions
-│   ├── df_to_sql.py          # SQLite-related functions
-│   └── visualization_helpers.py  # Plotting functions
-├── reports/                  # Reports and visualizations
-│   └── visualizations/       # Saved plots
-├── README.md                 # Project overview and instructions
-├── requirements.txt          # Dependencies
-└── experiments/              # Jupyter notebooks
-```
 
 ---
 

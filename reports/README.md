@@ -1,7 +1,14 @@
 # Reports Folder
 
-1 - This folder contains visualizations and graphical outputs generated during the project. These visualizations provide insights into the data and the results of various models. The visualizations in this folder are intended to:
+1 - This folder contains :
 
-2 - This folder also contains The report on Prediction of Heart failure.
+1. **exploratory_visuals**:  
+   This folder contains visualizations generated during the exploratory data analysis (EDA) and experimentation phase. These visuals are used for testing ideas, identifying patterns, and refining models.
+
+2. **final_visualizations**:  
+   This folder stores finalized and polished visualizations intended for reports, presentations. These visuals represent the key findings and conclusions of the project.
+
+
+3. This folder includes the final report on the Prediction of Heart Failure project.
 
 
