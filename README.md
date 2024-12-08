@@ -1,5 +1,7 @@
 # **Prediction OF Heart Failure Using Machine Learning**
 
+![heart](https://github.com/user-attachments/assets/3669e712-1efa-42c7-bf2f-7775dc0acf41)
+
 ## **Table of Contents**  
 1. [Overview](#overview)  
 3. [Dataset](#dataset)  
