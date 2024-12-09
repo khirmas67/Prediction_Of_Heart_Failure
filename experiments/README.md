@@ -96,15 +96,11 @@ In the `all_models_and_comparison` notebook, I experimented with various models 
     K-Nearest Neighbors (KNN)
     Neural Network
 
-The notebooks perform the following steps:
 
-    Import Libraries: Imports necessary libraries for data manipulation, model building, evaluation, and visualization.
-    Load, Split, and Preprocess Data: Loads the heart disease data, splits it into training and testing sets, and preprocesses the data using standard scaling and one-hot encoding for categorical features.
+    The notebooks perform the following steps:
+   Import Libraries: Imports necessary libraries for data manipulation, and visualization, then Load the heart disease data, splits it into training and testing sets, and preprocesses the data using standard scaling and one-hot encoding for categorical features, then model build and evaluate the modles on the test set and reports performance metrics and select the best model, then save the best model for each algorithm as pickel file. The summary is as follows:
 
     Random Forest:
-        Creates a Random Forest classifier with hyperparameter tuning using GridSearchCV.
-        Evaluates the best model on the test set and reports performance metrics including accuracy, precision, recall, and AUC-ROC score.
-        Saves the best model using pickle.
 
         Best Parameters Found:
             {'classifier__max_depth': 3, 'classifier__min_samples_leaf': 20, 'classifier__min_samples_split': 20, 'classifier__n_estimators': 100}
@@ -120,9 +116,6 @@ The notebooks perform the following steps:
          a difference of just 0.01 between training and validation accuracy is typically a good sign of balanced performance, not overfitting.
 
    Logistic Regression:
-        Creates a Logistic Regression classifier with hyperparameter tuning using GridSearchCV.
-        Evaluates the best model on the test set and reports performance metrics.
-        Saves the best model using pickle.
 
          Best Parameters Found:
             {'classifier__C': 0.19144819761699575, 'classifier__penalty': 'l2', 'classifier__solver': 'liblinear'}
@@ -138,10 +131,7 @@ The notebooks perform the following steps:
          a difference of just 0.0068 between training and validation accuracy is typically a good sign of balanced performance, not overfitting.
 
     KNN:
-        Creates a KNN classifier with hyperparameter tuning using GridSearchCV.
-        Evaluates the best model on the test set and reports performance metrics.
-        Saves the best model using pickle.
-
+        
          Best Parameters Found:
             {'classifier__n_neighbors': 20}
             Mean Cross-Validation Accuracy: 0.8638
