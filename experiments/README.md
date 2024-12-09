@@ -88,7 +88,7 @@ This notebook requires the following Python libraries:
 In the `experimental_model_neural_network`, `experimental_model_Logistic` and  `experimental_models_KNN_and_RandomForest` notebooks, I experimented with various baseline models and tested the processors in `experimental_models_KNN_and_RandomForest` to select the best processor. which I used in `all_models_and_comparison` and `all_models_and_comparison_1`:
 
 <img src="https://github.com/user-attachments/assets/8463dc45-7ba2-4910-9a63-1095d369f7f5" width="400" />
-
+```
 In the `all_models_and_comparison` notebook, I experimented with various models without explicitly addressing overfitting. I added cross-validation (CV) scores, compared training accuracy with test accuracy, and included the AUC score for the training set to assess performance. In contrast, in the `all_models_and_comparison_1` notebook, I further optimized the models to mitigate overfitting. Both notebooks explore the performance of various machine learning algorithms for predicting heart disease using a heart disease dataset. The evaluated algorithms include:
 
     Random Forest
@@ -169,3 +169,4 @@ In the `all_models_and_comparison` notebook, I experimented with various models 
 After finding the best model for each classifier a comaprison is made between them to find the best from them  
 
 ### **The best model was: Random Forest**
+```
