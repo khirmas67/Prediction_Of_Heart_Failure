@@ -169,4 +169,3 @@ In the `all_models_and_comparison` notebook, I experimented with various models 
 After finding the best model for each classifier a comaprison is made between them to find the best from them  
 
 ### **The best model was: Random Forest**
-```
