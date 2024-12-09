@@ -11,13 +11,13 @@ def load_and_preprocess_data(data_path):
     the processed data along with training and testing splits.
 
     Parameters:
-    - data_path (str): Path to the CSV file.
+    - data_path: Path to the CSV file.
 
     Returns:
-    - X_train (DataFrame): Preprocessed training features.
-    - X_test (DataFrame): Preprocessed testing features.
-    - y_train (Series): Training target variable.
-    - y_test (Series): Testing target variable.
+    - X_train: Preprocessed training features.
+    - X_test: Preprocessed testing features.
+    - y_train: Training target variable.
+    - y_test: Testing target variable.
     - preprocessor (ColumnTransformer): Preprocessing pipeline.
     """
     

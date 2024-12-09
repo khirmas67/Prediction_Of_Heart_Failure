@@ -6,11 +6,11 @@ def plot_and_save_histograms(data, features, output_file, title_prefix="Distribu
     Plot histograms for multiple features and save the figure to a file.
     
     Parameters:
-    - data (pd.DataFrame): The dataset containing the features.
-    - features (list): List of numeric features to plot.
-    - output_file (str): Path to save the output figure.
-    - title_prefix (str): Prefix for the titles of subplots.
-    - color (str): Color of the histograms.
+    - data : The dataset containing the features.
+    - features : List of numeric features to plot.
+    - output_file: Path to save the output figure.
+    - title_prefix: Prefix for the titles of subplots.
+    - color : Color of the histograms.
     """
 
     

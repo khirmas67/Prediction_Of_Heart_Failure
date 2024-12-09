@@ -7,12 +7,12 @@ def plot_numeric_analysis(data, numeric_features, target, output_file, palette="
     Create histograms with KDE for numeric features against a target variable and save the figure.
     
     Parameters:
-    - data (pd.DataFrame): The dataset containing numeric features and the target variable.
-    - numeric_features (list): List of numeric feature names.
-    - target (str): Target variable for grouping in the histograms.
-    - output_file (str): Path to save the output figure.
-    - palette (str): Color palette for the plots (default: 'colorblind').
-    - figsize (tuple): Size of the figure (default: (25, 8)).    
+    - data : The dataset containing numeric features and the target variable.
+    - numeric_features: List of numeric feature names.
+    - target: Target variable for grouping in the histograms.
+    - output_file: Path to save the output figure.
+    - palette: Color palette for the plots (default: 'colorblind').
+    - figsize: Size of the figure (default: (25, 8)).    
     """
     if data is None or data.empty:
         raise ValueError("The dataset is empty or invalid.")

@@ -6,9 +6,9 @@ def save_to_sqlite(db_file, table_name, dataframe):
     Save a DataFrame to an SQLite database.
 
     Parameters:
-        db_file (str): Path to the SQLite database file.
-        table_name (str): Name of the table to create or replace.
-        dataframe (pd.DataFrame): DataFrame to save in the database.
+        db_file : Path to the SQLite database file.
+        table_name : Name of the table to create or replace.
+        dataframe: DataFrame to save in the database.
     """
     # Connecting to SQLite database
     conn = sqlite3.connect(db_file)

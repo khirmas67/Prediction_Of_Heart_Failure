@@ -25,14 +25,14 @@ def plot_model_evaluation(model_name, y_test, y_pred, y_pred_prob, test_accuracy
     Generate evaluation plots for each model.
 
     Parameters:
-    - model_name (str): Name of the model (e.g., "KNN", "Neural Network").
-    - y_test (array-like): True labels of the test set.
-    - y_pred (array-like): Predicted classes of the model.
-    - y_pred_prob (array-like): Predicted probabilities of the positive class.
-    - test_accuracy (float): Accuracy score of the model.
-    - precision (float): Precision score of the model.
-    - recall (float): Recall score of the model.
-    - output_dir (str): Directory to save the plots (default: "../reports").
+    - model_name: Name of the model (e.g., "KNN", "Neural Network").
+    - y_test : True labels of the test set.
+    - y_pred : Predicted classes of the model.
+    - y_pred_prob: Predicted probabilities of the positive class.
+    - test_accuracy: Accuracy score of the model.
+    - precision: Precision score of the model.
+    - recall: Recall score of the model.
+    - output_dir: Directory to save the plots (default: "../reports").
     """
 
     # Plot ROC Curve

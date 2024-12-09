@@ -7,12 +7,12 @@ def plot_categorical_analysis(data, categorical_features, target, output_file, p
     Create count plots for categorical features against a target variable and save the figure.
     
     Parameters:
-    - data (pd.DataFrame): The dataset containing categorical features and the target variable.
-    - categorical_features (list): List of categorical feature names.
-    - target (str): Target variable for grouping in the count plots.
-    - output_file (str): Path to save the output figure.
-    - palette (str): Color palette for the plots (default: 'Set2').
-    - figsize (tuple): Size of the figure (default: (12, 15)).
+    - data: The dataset containing categorical features and the target variable.
+    - categorical_features: List of categorical feature names.
+    - target: Target variable for grouping in the count plots.
+    - output_file: Path to save the output figure.
+    - palette: Color palette for the plots (default: 'Set2').
+    - figsize : Size of the figure (default: (12, 15)).
 
     """
     if data is None or data.empty:
